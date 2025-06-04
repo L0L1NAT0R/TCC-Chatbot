@@ -51,16 +51,31 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
         w for w in user_tokens if w.strip() and w not in filler_words and len(w.strip()) >= 2
     ]
 
-    # 🔍 Define semantic trigger words
     semantic_triggers = {
-        "overview": ["คืออะไร", "เกี่ยวกับ", "หน้าที่", "ทำอะไร", "องค์กรอะไร", "overview", "ทำหน้าที่"],
-        "mission": ["พันธกิจ", "เป้าหมาย", "ทำเพื่ออะไร", "บทบาท", "ภารกิจ", "mission"],
-        "history": ["ประวัติ", "ก่อตั้ง", "เมื่อไหร่", "ปี", "เริ่มต้น", "history"],
-        "revenue": ["รายได้", "การเงิน", "งบประมาณ", "เงิน", "income", "revenue"],
-        "contact": ["ติดต่อ", "เบอร์", "อีเมล", "ที่อยู่", "สำนักงาน", "contact", "phone", "address"]
+        "overview": [
+            "คืออะไร", "เกี่ยวกับ", "หน้าที่", "ทำอะไร", "องค์กรอะไร", "overview", "ทำหน้าที่"
+        ],
+        "mission": [
+            "พันธกิจ", "เป้าหมาย", "ทำเพื่ออะไร", "บทบาท", "ภารกิจ", "mission"
+        ],
+        "history": [
+            "ประวัติ", "ก่อตั้ง", "เมื่อไหร่", "ปี", "เริ่มต้น", "history"
+        ],
+        "revenue": [
+            "รายได้", "การเงิน", "งบประมาณ", "เงิน", "income", "revenue", "ค่าธรรมเนียม", "เงินอุดหนุน"
+        ],
+        "contact": [
+            "ติดต่อ", "เบอร์", "อีเมล", "ที่อยู่", "สำนักงาน", "contact", "phone", "address"
+        ],
+        "vision": [
+            "วิสัยทัศน์", "เป้าหมายสูงสุด", "อนาคต", "เห็นภาพ", "มุ่งหวัง", "vision"
+        ],
+        "strategy": [
+            "กลยุทธ์", "ยุทธศาสตร์", "แผนงาน", "การดำเนินงาน", "strategy", "ระยะยาว", "แผน 5 ปี"
+        ]
     }
 
-    # 🔍 Detect which category the prompt most likely refers to
+
     prompt_boost_category = None
     for section, keywords in semantic_triggers.items():
         for kw in keywords:
@@ -86,11 +101,10 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
 
         score = 0
 
-        # 🎯 Intent alignment: boost if user's prompt and title agree
-        if prompt_boost_category and prompt_boost_category in title_norm:
+        if prompt_boost_category and normalize(title) == prompt_boost_category:
             score += 5
 
-        # 🔡 Token title match
+
         title_score = sum(
             2 if word == token else 1
             for word in signal_words
@@ -99,7 +113,6 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
         )
         score += 2 * title_score
 
-        # 📄 Content match (light)
         content_score = sum(
             1
             for word in signal_words
@@ -108,42 +121,70 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
         )
         score += min(content_score, 5)
 
-        # 🧠 Fuzzy match to content (for long answers)
         if skip_title_filter and content:
             similarity = SequenceMatcher(None, user_msg_clean, content_norm).ratio()
             if similarity >= 0.5:
                 score += 3
 
-        # ✅ Include if it's clearly relevant or if we're in fallback mode
+        # ✅ Hashtag match boost — apply only if present
+        # ✅ Hashtag match boost — apply only if present
+        hashtags = doc.get("hashtags", [])
+        hashtag_score = 0
+        for tag in hashtags:
+            tag_norm = normalize(tag)
+
+            # Check direct inclusion (cleaned)
+            if tag_norm in user_msg_clean:
+                print(f"🎯 Exact hashtag matched: {tag_norm}")
+                hashtag_score += 12
+                continue
+
+            # Check token overlap if not full phrase match
+            tag_tokens = [tok for tok in word_tokenize(tag_norm, engine="newmm") if tok.strip()]
+            match_count = sum(1 for tok in tag_tokens if any(tok in utok or utok in tok for utok in user_tokens))
+
+            if match_count == len(tag_tokens):
+                print(f"✅ Full token overlap with hashtag: {tag_norm}")
+                hashtag_score += 10
+            elif match_count >= 1:
+                print(f"➕ Partial token overlap with hashtag: {tag_norm}")
+                hashtag_score += 5
+
+        score += hashtag_score
+
+
         if score >= 3 or skip_title_filter:
             scored.append((score, doc))
 
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    # Debug output
     print("✅ MATCHED TITLES:")
     for score, doc in scored[:max_docs]:
         print(f"- ({score}) {doc.get('title', '❌ no title')}")
 
-    return scored[:max_docs]  # returns list of (score, doc)
-
+    return scored[:max_docs]
 
 @app.route("/ask", methods=["POST"])
 def ask():
     user_msg = request.json["message"]
-    user_tokens = word_tokenize(user_msg.lower(), engine="newmm")
+    user_msg_clean = normalize(user_msg)  # move this BEFORE tokenization
+    user_tokens = [tok for tok in word_tokenize(user_msg_clean, engine="newmm") if tok.strip()]
 
     about_keywords = [
-        "tcc", "สภาผู้บริโภค", "เกี่ยวกับ", "ประวัติ", "ที่มา", "วิสัยทัศน์",
-        "พันธกิจ", "ก่อตั้ง", "องค์กร", "บริษัท", "จดทะเบียน", "ติดต่อ", "เป้าหมาย"
+        "สภาผู้บริโภค", "tcc", "องค์กร", "บริษัท", "เกี่ยวกับบริษัท", "หน้าที่", "ประวัติ", "ก่อตั้ง",
+        "กฎหมาย", "ติดต่อ", "เบอร์", "อีเมล", "สำนักงาน", "เลขาธิการ", "สำนักงานใหญ่"
     ]
 
-    matched_about = [kw for kw in about_keywords if kw in user_tokens]
+    matched_about = [
+        kw for kw in about_keywords
+        if kw in user_msg_clean or any(kw in token for token in user_tokens)
+    ]
+
     fuzzy_match = any(
-        SequenceMatcher(None, kw, token).ratio() >= 0.8
+        SequenceMatcher(None, kw, user_msg_clean).ratio() >= 0.85
         for kw in about_keywords
-        for token in user_tokens
     )
+
     is_about_company = len(matched_about) > 0 or fuzzy_match
 
     print("🔍 TOKENS:", user_tokens)
@@ -170,7 +211,6 @@ def ask():
                 reply = f"<strong>{title}</strong><br>{content[:800]}..."
             else:
                 reply = "ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่ค่ะ"
-
         else:
             reply = ""
             for score, doc in filtered_docs[:3]:

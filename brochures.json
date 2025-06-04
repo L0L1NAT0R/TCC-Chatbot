@@ -1,634 +1,721 @@
-  [
-    {
-      "title": "6 เทคนิค ขับรถลุยน้ำท่วม ให้ปลอดภัย",
-      "url": "https://www.tcc.or.th/tcc_media/cars-driving-through-a-flood/"
-    },
-    {
-      "title": "ขาย “ทุเรียนอ่อน” ผิดกฎหมาย พบเจอ “แจ้งความ – ร้องเรียน” ได้เลย",
-      "url": "https://www.tcc.or.th/tcc_media/immature-durian/"
-    },
-    {
-      "title": "รู้ก่อนใช้ ทิชชูเปียก เลือกยังไงให้ปลอดภัย",
-      "url": "https://www.tcc.or.th/tcc_media/wet-wipes/"
-    },
-    {
-      "title": "ร้อนนี้ ระวัง! ของต้องห้าม อย่าทิ้งไว้ในรถ",
-      "url": "https://www.tcc.or.th/tcc_media/never-leave-in-your-car/"
-    },
-    {
-      "title": "พัสดุสูญหาย จัดส่งล่าช้า ผู้บริโภคมีสิทธิได้รับชดเชย",
-      "url": "https://www.tcc.or.th/tcc_media/transport-goods/"
-    },
-    {
-      "title": "4 เช็ก เพจปลอม ให้ชัวร์ก่อนจองที่พัก",
-      "url": "https://www.tcc.or.th/tcc_media/4-check-fake-page/"
-    },
-    {
-      "title": "4.4 นี้ ยึดหลัก 4 ต. ซื้อของออนไลน์ให้ปลอดภัย",
-      "url": "https://www.tcc.or.th/tcc_media/4-4-shop-online/"
-    },
-    {
-      "title": "อาคารเสียหายจากแผ่นดินไหว เลือกผู้ตรวจสอบอย่างไรให้ได้มาตรฐาน",
-      "url": "https://www.tcc.or.th/tcc_media/earthquake-building-inspector/"
-    },
-    {
-      "title": "เสียหายจากแผ่นดินไหว ต้องเคลมประกันอย่างไร",
-      "url": "https://www.tcc.or.th/tcc_media/earthquake-insurance-claim/"
-    },
-    {
-      "title": "เรียกร้องทบทวน Co-payment เพื่อความเป็นธรรมและลดภาระผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/co-payment/"
-    },
-    {
-      "title": "ก่อนเข้าคลินิกทำฟัน อย่าลืมดูใบอนุญาตเปิดคลินิกทันตกรรมด้วย",
-      "url": "https://www.tcc.or.th/tcc_media/dental-clinic/"
-    },
-    {
-      "title": "พบร้านค้าฉวยโอกาสขึ้นราคาในช่วง วาเลนไทน์ ทำยังไงดี",
-      "url": "https://www.tcc.or.th/tcc_media/valentine/"
-    },
-    {
-      "title": "รู้ทันทุก ‘ปัญหาแก๊ส’ รวมช่องทางติดต่อที่ต้องรู้",
-      "url": "https://www.tcc.or.th/tcc_media/gas-cylinder-complaint/"
-    },
-    {
-      "title": "ผู้บริโภคต้องรู้ โฆษณาเสริมความงามแบบไหน ไม่ผิดกฎหมาย?",
-      "url": "https://www.tcc.or.th/tcc_media/cosmetic-surgery/"
-    },
-    {
-      "title": "ตกเป็นเหยื่อ ‘แอปกู้เงินเถื่อน’ ต้องทำยังไง",
-      "url": "https://www.tcc.or.th/tcc_media/illegal-money-loan-apps/"
-    },
-    {
-      "title": "ถูกเรียกเก็บค่ารักษาพยาบาล ทั้งที่ไม่ควรจ่าย ร้องเรียนได้",
-      "url": "https://www.tcc.or.th/tcc_media/expenses/"
-    },
-    {
-      "title": "ผู้บริโภคเจ็บป่วยวิกฤต ใช้สิทธิ UCEP ได้ทุกที่ไม่มีค่าใช้จ่าย หากพบปัญหารีบร้องเรียน",
-      "url": "https://www.tcc.or.th/tcc_media/ucep/"
-    },
-    {
-      "title": "รู้ทันก่อนเสียอนาคต! รับเปิดบัญชีม้า – ซิมม้า โทษหนักถึงคุก",
-      "url": "https://www.tcc.or.th/tcc_media/mule-account-scam/"
-    },
-    {
-      "title": "สภาองค์กรผู้บริโภคชวนเช็กเอกสารหลักฐานที่ต้องได้ ตอนเอารถเข้าอู่ซ่อม ป้องกันผู้บริโภคโดนเอาเปรียบ",
-      "url": "https://www.tcc.or.th/tcc_media/repair-garage-recipt/"
-    },
-    {
-      "title": "จอง ‘ห้องพัก’ อย่างไรให้ปลอดภัย ไม่ให้ถูกหลอก",
-      "url": "https://www.tcc.or.th/tcc_media/howto-choose-best-hotel/"
-    },
-    {
-      "title": "เปิดวิธีแก้ปัญหาจองตั๋วเครื่องบินแล้วถูกยกเลิก พร้อมขอเงินคืนอย่างมั่นใจ",
-      "url": "https://www.tcc.or.th/tcc_media/book-tickets/"
-    },
-    {
-      "title": "เช็กของได้ก่อนจ่ายเงินปลายทาง ปฏิเสธไม่รับ ขอเงินคืนได้ ตามมาตรการส่งดี (Dee Delivery)",
-      "url": "https://www.tcc.or.th/tcc_media/3-oct-dee-delivery/"
-    },
-    {
-      "title": "ซื้อ ‘ทองรูปพรรณ’ มาแต่คุณภาพไม่ตรงตามโฆษณา ขอเงินคืนได้เต็มจำนวน",
-      "url": "https://www.tcc.or.th/tcc_media/not-as-advertised-gold/"
-    },
-    {
-      "title": "เปิด 5 ขั้นตอน ซื้อทองคำอย่างไร ให้ปลอดภัย ไม่โดนหลอก",
-      "url": "https://www.tcc.or.th/tcc_media/howto-buy-gold/"
-    },
-    {
-      "title": "เช็กให้ครบ ก่อนตัดสินใจเช่า ‘หอพัก – คอนโด’ ต้องตรวจสอบตามนี้",
-      "url": "https://www.tcc.or.th/tcc_media/check-list-condo/"
-    },
-    {
-      "title": "สภาผู้บริโภคแนะผู้บริโภค ใส่ใจ ใส่บาตร เพื่อสุขภาพของพระสงฆ์",
-      "url": "https://www.tcc.or.th/tcc_media/buddhist-monk-food/"
-    },
-    {
-      "title": "สายรีวิวต้องดู รีวิวสินค้ายังไง ไม่เสี่ยงถูกฟ้องหมิ่น",
-      "url": "https://www.tcc.or.th/tcc_media/review-sue-for-defamation/"
-    },
-    {
-      "title": "ซื้อปากกาลดน้ำหนักใช้เอง เสี่ยงสูงต่อสุขภาพ! ผู้บริโภคต้องใช้ตามแพทย์สั่งเท่านั้น",
-      "url": "https://www.tcc.or.th/tcc_media/weight-loss-pen-side-effect/"
-    },
-    {
-      "title": "วิกฤตภัยการเงินออนไลน์ กับการคุ้มครองผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/finance-technology-crimes/"
-    },
-    {
-      "title": "ผู้บริโภคระวัง! ไซบูทรามีน สารอันตรายในอาหารเสริม ผอมชั่วคราวสุขภาพพังยาว",
-      "url": "https://www.tcc.or.th/tcc_media/sibutramine-hazard/"
-    },
-    {
-      "title": "แนะผู้บริโภค ‘เลิกบุหรี่’ อย่างไรให้ได้ผล และปลอดภัยต่อสุขภาพ",
-      "url": "https://www.tcc.or.th/tcc_media/31052567_quit-smoking_info/"
-    },
-    {
-      "title": "6 ข้อแนะนำ ยืดอายุแบตเตอรี่รถยนต์ไฟฟ้า",
-      "url": "https://www.tcc.or.th/tcc_media/6tips-ev-batterylifecycle/"
-    },
-    {
-      "title": "5 เรื่องสำคัญต้องดู ก่อนเลือกซื้อ ‘คอนโด’ ป้องกันปัญหาไม่ตรงปก – สัญญาไม่เป็นธรรม",
-      "url": "https://www.tcc.or.th/tcc_media/condo-checklist/"
-    },
-    {
-      "title": "เช็กก่อนใช้ ระวังอันตรายหากใช้ถังแก๊สหมดอายุ",
-      "url": "https://www.tcc.or.th/tcc_media/gas-tank-expired-dangerous/"
-    },
-    {
-      "title": "เผลอทำประกันทางโทรศัพท์ไปแล้ว ก็สามารถยกเลิกได้",
-      "url": "https://www.tcc.or.th/tcc_media/insurance-cancel/"
-    },
-    {
-      "title": "วันแรงงาน แต่ต้องทำงาน… ต้องได้หยุดชดเชยในวันอื่น หรือได้ค่าแรงเพิ่มไม่น้อยกว่าหนึ่งเท่า",
-      "url": "https://www.tcc.or.th/tcc_media/01052567_lobors-day_artwork/"
-    },
-    {
-      "title": "ระวังใช้หัวชาร์จรถยนต์ไฟฟ้าผิดประเภท เช็กก่อนแบบไหนชาร์จช้า – ชาร์จเร็ว",
-      "url": "https://www.tcc.or.th/tcc_media/evcar-charger/"
-    },
-    {
-      "title": "ระวัง ‘ทัวร์เถื่อน’ อย่าลืมเช็กข้อมูลก่อนซื้อทัวร์",
-      "url": "https://www.tcc.or.th/tcc_media/09042567_fake-tour_info/"
-    },
-    {
-      "title": "สงกรานต์นี้ เลือกซื้อปืนฉีดน้ำปลอดภัย ต้องมี มอก. คู่กับคิวอาร์โค้ด",
-      "url": "https://www.tcc.or.th/tcc_media/water-gun-safety/"
-    },
-    {
-      "title": "แจ้งเตือน… ผู้เสียหาย ‘หุ้นกู้สตาร์ก’ ยื่นคำขอรับชำระหนี้ภายในวันที่ 11 เม.ย. 67",
-      "url": "https://www.tcc.or.th/tcc_media/03042567_stark-investment-warning_info/"
-    },
-    {
-      "title": "ผู้เสียหาย ‘มาสด้า ซีเอ็กซ์ – 5 สกายแอคทีฟ ดีเซล’ เช็กเงื่อนไขการเยียวยา ที่นี่",
-      "url": "https://www.tcc.or.th/tcc_media/mazda-cx-5-extended-warranty/"
-    },
-    {
-      "title": "เอไอใกล้ตัว",
-      "url": "https://www.tcc.or.th/tcc_media/ai-in-dailylife/"
-    },
-    {
-      "title": "หนี้สินรุมเร้า ผู้บริโภคต้องเข้ามาตรการแก้หนี้ ของธนาคารแห่งประเทศไทย (ธปท.)",
-      "url": "https://www.tcc.or.th/tcc_media/21022024-responsible-lending/"
-    },
-    {
-      "title": "ขอ 10,000 ชื่อ ‘ปฏิรูปกฎหมายเครดิตบูโร’",
-      "url": "https://www.tcc.or.th/tcc_media/credit-bureau-reform-campaign/"
-    },
-    {
-      "title": "เปิด 3 เกณฑ์สำคัญ ธนาคารต้องทำ ปล่อยสินเชื่อ ห้ามกระตุ้นคนก่อหนี้",
-      "url": "https://www.tcc.or.th/tcc_media/3-conditions-credit/"
-    },
-    {
-      "title": "เลือกซื้อของไหว้ตรุษจีนให้ปังตลอดปี",
-      "url": "https://www.tcc.or.th/tcc_media/chinese-newyear/"
-    },
-    {
-      "title": "6 ปี อุบัติเหตุพระราม 2 เสียชีวิต 132 ราย",
-      "url": "https://www.tcc.or.th/tcc_media/19012567_rama2roadaccidentinfographic/"
-    },
-    {
-      "title": "ต้มน้ำกระท่อมขาย = ผิดกฎหมายเต็ม ๆ",
-      "url": "https://www.tcc.or.th/tcc_media/illegal_kratom-water/"
-    },
-    {
-      "title": "รถไฟฟ้าสาย “ชมพู-เหลือง” พึ่งเปิดใช้งาน เกิดอุบัติเหตุ 2 ครั้ง ความปลอดภัยผู้บริโภคอยู่ที่ไหน",
-      "url": "https://www.tcc.or.th/tcc_media/04012567_publictrainaccidentinfographic/"
-    },
-    {
-      "title": "5 สิทธิผู้บริโภคต้องรู้ เพื่อใช้บริการมือถือไม่ให้เสียเปรียบ",
-      "url": "https://www.tcc.or.th/tcc_media/5rights-usemobileservice/"
-    },
-    {
-      "title": "ผู้เสียหายจากอุบัติเหตุรถสารสาธารณะ อย่าเซ็นรับเงินเยียวยา ถ้ายังไม่ได้ทำตาม 4 ข้อนี้",
-      "url": "https://www.tcc.or.th/tcc_media/accident-not-sign/"
-    },
-    {
-      "title": "เช็กเลย! สิทธิที่ต้องได้ทันที เมื่อบาดเจ็บ – เสียชีวิตจากอุบัติเหตุโดยรถสาธารณะ",
-      "url": "https://www.tcc.or.th/tcc_media/accident-check/"
-    },
-    {
-      "title": "เปิดนโยบาย 6 ทีม ชิงบอร์ดประกันสังคม",
-      "url": "https://www.tcc.or.th/tcc_media/vote-board-sso/"
-    },
-    {
-      "title": "กลุ่มผู้เสียหาย มาสด้า 2 สกายแอคทีฟ ดีเซล อย่าลืม! ยื่นคำขอรับชำระหนี้  ภายในวันที่ 12 เม.ย. 67",
-      "url": "https://www.tcc.or.th/tcc_media/06122566_mazda2_info/"
-    },
-    {
-      "title": "สายเที่ยวจองทัวร์ แล้วโดนเท ต้องทำอย่างไร",
-      "url": "https://www.tcc.or.th/tcc_media/booking-tour-failed/"
-    },
-    {
-      "title": "ผลสำรวจความต้องการรถไฟฟ้าสายสีชมพูสูงสุด 20 บาท",
-      "url": "https://www.tcc.or.th/tcc_media/30112566_pinklinesurveyinfographic/"
-    },
-    {
-      "title": "เผยเคล็ดลับเลือกผู้ตรวจสอบอาคาร ให้ได้บ้านดี ปลอดภัย ได้มาตรฐาน",
-      "url": "https://www.tcc.or.th/tcc_media/building-inspector/"
-    },
-    {
-      "title": "11.11 ชอปอย่างมีสติ รู้ให้ทันป้องกันโดนหลอก",
-      "url": "https://www.tcc.or.th/tcc_media/11-11-shopping-sale/"
-    },
-    {
-      "title": "แนะวิธีการยืนยันตัวตน 2 ระดับ เพิ่มความปลอดภัยในการใช้งานไลน์ ป้องกันมิจฉาชีพ",
-      "url": "https://www.tcc.or.th/tcc_media/28112566_lineidentification/"
-    },
-    {
-      "title": "ขอ 10,000 ชื่อ ร่วมสนับสนุนกฎหมาย เปลี่ยนเบี้ยยังชีพ เป็น ‘บำนาญถ้วนหน้า’",
-      "url": "https://www.tcc.or.th/tcc_media/pension-campaign-031166/"
-    },
-    {
-      "title": "‘บำนาญถ้วนหน้า’ หลักประกันยามสูงวัย",
-      "url": "https://www.tcc.or.th/tcc_media/why-pension-021166/"
-    },
-    {
-      "title": "Trick or Treat ซื้อขนมอย่างไร ไม่ให้ถูก “หลอก”",
-      "url": "https://www.tcc.or.th/tcc_media/trick-or-treat-2023/"
-    },
-    {
-      "title": "ผู้บริโภคต้องรู้! ซื้อประกันสุขภาพอย่างไร ไม่ให้เกิดปัญหาเคลมประกันไม่ได้",
-      "url": "https://www.tcc.or.th/tcc_media/28092566_healthinsurance-claim-consumer/"
-    },
-    {
-      "title": "ผู้รับเหมาใช้วัสดุผิดสเปก ถือว่าผิดกฎหมาย ร้องเรียนได้ทันที",
-      "url": "https://www.tcc.or.th/tcc_media/contractor-wrong-spec/"
-    },
-    {
-      "title": "ซื้ออาหารเจสำเร็จรูปให้ปลอดภัยต่อสุขภาพ ผู้บริโภคต้องสังเกตฉลากอะไรบ้าง",
-      "url": "https://www.tcc.or.th/tcc_media/191066-j-festival-info/"
-    },
-    {
-      "title": "เปิดสถิติการเกิดอุบัติเหตุในรอบ 5 ปีบนถนนพระราม 2",
-      "url": "https://www.tcc.or.th/tcc_media/30092566_rama2roadaccident/"
-    },
-    {
-      "title": "เปิดไทม์ไลน์ ก่อสร้างถนนพระราม 2 สร้าง 50 ปี ไม่เสร็จสักที",
-      "url": "https://www.tcc.or.th/tcc_media/30092566_rama2_construction_infographic/"
-    },
-    {
-      "title": "ค่าไฟลดแล้ว! เตือน ผู้ให้เช่า-ผู้เช่า ห้องพัก หอ เช็กบิลค่าไฟเดือน กย. ให้ตรงกัน ต้อง 3.99 บาท/หน่วย เท่านั้น",
-      "url": "https://www.tcc.or.th/tcc_media/electricity-bill/"
-    },
-    {
-      "title": "สภาผู้บริโภค เสนอ 9 นโยบายคุ้มครองผู้บริโภค เพื่อคุณภาพชีวิตที่ดีของทุกคน",
-      "url": "https://www.tcc.or.th/tcc_media/06092566_tcc-9-proposals_info/"
-    },
-    {
-      "title": "ผู้บริโภคจะซื้อ ‘ตุ๊กตา’ ต้องเลือกที่ปลอดภัยมองหาเครื่องหมาย มอก. กับคิวอาร์โค้ด",
-      "url": "https://www.tcc.or.th/tcc_media/safe-toys/"
-    },
-    {
-      "title": "จะกินของดี แต่ได้ของเสีย หมดอายุ ผู้บริโภคร้องเรียนได้ไหม?",
-      "url": "https://www.tcc.or.th/tcc_media/food-expired/"
-    },
-    {
-      "title": "ใช้แอปเรียกรถ แล้วได้รับอันตราย ต้องทำอย่างไร?",
-      "url": "https://www.tcc.or.th/tcc_media/ridesharing-app/"
-    },
-    {
-      "title": "ใช้บริการรถประจำทาง เจอ “ขับซิ่ง รถเหม็น โดนเท ตั๋วแพง” ร้องเรียนได้เลย!",
-      "url": "https://www.tcc.or.th/tcc_media/290766-complaint-transport/"
-    },
-    {
-      "title": "ชาร์จรถไฟฟ้าในบ้าน ต้องเตรียมอะไรบ้าง ติดตั้งอย่างไร",
-      "url": "https://www.tcc.or.th/tcc_media/26072566_ev-charger_info/"
-    },
-    {
-      "title": "ถูกบังคับผ่อนมอเตอร์ไซค์ ทั้งที่จะซื้อสด เจอแบบนี้ต้องทำอย่างไร?",
-      "url": "https://www.tcc.or.th/tcc_media/buy-motorcycle-2/"
-    },
-    {
-      "title": "อย่าลืมเช็ก 4 ข้อ ก่อนโอนเงินซื้อของ",
-      "url": "https://www.tcc.or.th/tcc_media/4-checked-online-shopping_info/"
-    },
-    {
-      "title": "ร้านค้าออนไลน์ในเฟซบุ๊กมาเก็ตเพลส ปลอดภัยจริงหรือไม่?",
-      "url": "https://www.tcc.or.th/tcc_media/facebook-marketplace/"
-    },
-    {
-      "title": "ผู้บริโภคสายสุขภาพช็อก! กินขนมคลีนหวังผอม แต่ทำไมยิ่งกินยิ่งอ้วน?",
-      "url": "https://www.tcc.or.th/tcc_media/clean-snacks/"
-    },
-    {
-      "title": "โดนโกงออนไลน์ สั่งของแล้วไม่ได้ / ของไม่ตรงปก / ได้ของปลอม รีบทำ 3 ขั้นตอนนี้",
-      "url": "https://www.tcc.or.th/tcc_media/13062566_online-fruad_info/"
-    },
-    {
-      "title": "ผู้บริโภคโดนหลอกขายสินค้า – โดนโกงออนไลน์ หรือโดนแฮกข้อมูล แจ้งความที่สถานีตำรวจได้ทุกท้องที่",
-      "url": "https://www.tcc.or.th/tcc_media/police-online-service/"
-    },
-    {
-      "title": "เช็กให้ชัวร์! ก่อนช้อปสินค้าออนไลน์ ป้องกันโดนโกง",
-      "url": "https://www.tcc.or.th/tcc_media/check-before-you-pay/"
-    },
-    {
-      "title": "เจอแมลง เศษพลาสติก หนังยางในอาหาร อย่าโยนทิ้ง! ถ่ายรูป เก็บหลักฐานแล้วร้องเรียน",
-      "url": "https://www.tcc.or.th/tcc_media/contaminated-food/"
-    },
-    {
-      "title": "วิธีจัดและเลือกซื้อ ‘ชุดสังฆทาน’",
-      "url": "https://www.tcc.or.th/tcc_media/offerings-for-the-monks/"
-    },
-    {
-      "title": "ตักบาตรอย่างไร ให้ (พระสงฆ์) ห่างไกลโรค",
-      "url": "https://www.tcc.or.th/tcc_media/offer-goodfood-to-the-monk/"
-    },
-    {
-      "title": "การกำกับดูแลการแข่งขันธุรกิจแพลตฟอร์ม e-Marketplace ในประเทศไทย",
-      "url": "https://www.tcc.or.th/tcc_media/26052566_e-marketplace-report/"
-    },
-    {
-      "title": "ช้อปอย่างไรไม่ให้พลาด? สภาผู้บริโภคชวนเช็ก ‘คิวอาร์โค้ด’  พร้อมเครื่องหมาย มอก. แบบใหม่",
-      "url": "https://www.tcc.or.th/tcc_media/qrcode-with-tis/"
-    },
-    {
-      "title": "เปิดลิสต์ 16 สินค้าและบริการห้ามขาย! เสี่ยงอันตรายต่อสุขภาพผู้บริโภค ตามประกาศ สคบ.",
-      "url": "https://www.tcc.or.th/tcc_media/ocpb-goods-blacklist/"
-    },
-    {
-      "title": "ร้องเรียนสภาผู้บริโภค กินชาบูแล้วโดนไฟดูด ผู้บริโภคทำอย่างไรดี?",
-      "url": "https://www.tcc.or.th/tcc_media/food-shabu/"
-    },
-    {
-      "title": "เจอ “ทัวร์ไม่ตรงปก” ผู้บริโภคสายเที่ยว ร้องเรียนที่ไหน?",
-      "url": "https://www.tcc.or.th/tcc_media/travel-agency/"
-    },
-    {
-      "title": "แนะผู้ปกครองอย่าลืมเช็กใบเสร็จหลังซื้อสินค้าทุกครั้ง ระวังราคาไม่ตรงป้าย!",
-      "url": "https://www.tcc.or.th/tcc_media/school-uniform/"
-    },
-    {
-      "title": "7 เคล็ด (ไม่) ลับ เมื่อชาร์จรถไฟฟ้าในที่สาธารณะ",
-      "url": "https://www.tcc.or.th/tcc_media/ev-in-public/"
-    },
-    {
-      "title": "เมื่อคลินิกปิดกิจการ แต่ตัดเงินผ่านบัตรเครดิตไปแล้ว ทำยังไงดี?",
-      "url": "https://www.tcc.or.th/tcc_media/clinic-creditcard/"
-    },
-    {
-      "title": "มอเตอร์ไซค์ขับขี่มั่นใจ ปลอดภัยด้วยระบบเบรก ABS",
-      "url": "https://www.tcc.or.th/tcc_media/abs-motorcycle/"
-    },
-    {
-      "title": "รวมปัญหายอดฮิตของรถยนต์ไฟฟ้า พร้อมวิธีแก้เบื้องต้น",
-      "url": "https://www.tcc.or.th/tcc_media/howto-solve-ev/"
-    },
-    {
-      "title": "‘พลังงานหมุนเวียน’ มีอะไรบ้าง",
-      "url": "https://www.tcc.or.th/tcc_media/what-is-renewable-energy/"
-    },
-    {
-      "title": "ซื้อสินค้าแล้วมีปัญหา โดนโกง ร้องเรียนที่ไหน ต้องทำอย่างไรบ้าง ?",
-      "url": "https://www.tcc.or.th/tcc_media/howto-complaint-onlineshopping/"
-    },
-    {
-      "title": "ช่วงยื่นภาษี ‘มิจฉาชีพ’ หลอกดูดเงินรูปแบบใหม่ระบาดหนัก",
-      "url": "https://www.tcc.or.th/tcc_media/15022566_scam-revenue_info/"
-    },
-    {
-      "title": "สภาผู้บริโภค เตือน ซื้อประกันสะสมทรัพย์ ผู้บริโภคต้องอ่านข้อมูลสำคัญให้ครบ",
-      "url": "https://www.tcc.or.th/tcc_media/read-insurance/"
-    },
-    {
-      "title": "พบร้านค้าคิดเงินเกินจริง – ราคาไม่ตรงป้าย ผู้บริโภคสามารถเรียกร้องสิทธิในฐานะผู้ซื้อทันที",
-      "url": "https://www.tcc.or.th/tcc_media/exaggerate-price/"
-    },
-    {
-      "title": "“กระเป๋าเดินทางสลับกันที่สนามบิน” ทำยังไงดี?",
-      "url": "https://www.tcc.or.th/tcc_media/03022566_cabin-baggage_info/"
-    },
-    {
-      "title": "ชวนเปลี่ยนถุงลมนิรภัย เปลี่ยนฟรีไม่มีค่าใช้จ่าย",
-      "url": "https://www.tcc.or.th/tcc_media/29122565_chech-airbag_landing/"
-    },
-    {
-      "title": "ต้องดูอะไรบ้าง? ก่อน ‘เช่ารถ’ เที่ยวเทศกาล",
-      "url": "https://www.tcc.or.th/tcc_media/car-rental_caution/"
-    },
-    {
-      "title": "4 ข้อควรรู้ ก่อนซื้อ ‘รถยนต์ไฟฟ้า (EV)’",
-      "url": "https://www.tcc.or.th/tcc_media/ev-tips/"
-    },
-    {
-      "title": "ทำไมต้องใช้ ‘คาร์ซีท’",
-      "url": "https://www.tcc.or.th/tcc_media/why-kids-need-carseats/"
-    },
-    {
-      "title": "12.12 ซื้อของออนไลน์ให้ปลอดภัย ผู้บริโภคต้องยึดหลัก 4 ต.",
-      "url": "https://www.tcc.or.th/tcc_media/12-12_onlineshopping-tips/"
-    },
-    {
-      "title": "เตือนภัย อย่าหลงเชื่อเพจแอบอ้างชื่อ รพ. รับรองเพื่อจำหน่ายบุหรี่ไฟฟ้า",
-      "url": "https://www.tcc.or.th/tcc_media/10122565_e-cigarettes/"
-    },
-    {
-      "title": "เงินในบัญชีหาย…ผู้บริโภคต้องทำอย่างไร",
-      "url": "https://www.tcc.or.th/tcc_media/09122565_if-you-lost-your-money/"
-    },
-    {
-      "title": "ผู้บริโภคต้องระวัง ถูกหลอกลวงขายรถที่ใช้ป้ายทะเบียนปลอม!",
-      "url": "https://www.tcc.or.th/tcc_media/fake_car-label/"
-    },
-    {
-      "title": "ข้อสำคัญต้องรู้ก่อนทำ “สัญญากู้ยืมเงิน”",
-      "url": "https://www.tcc.or.th/tcc_media/23112565_loan-agreement_info/"
-    },
-    {
-      "title": "โรลอัพ สภาองค์กรของผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/28102565-rollup/"
-    },
-    {
-      "title": "ปิดบัญชีเงินกู้ศรีสวัสดิ์ ต้องไม่เสียค่าไถ่โฉนดที่ดินหรือทะเบียนรถ",
-      "url": "https://www.tcc.or.th/tcc_media/13102565_srisawad/"
-    },
-    {
-      "title": "| ถาม – ตอบ | กรณีควบรวม ทรู – ดีแทค",
-      "url": "https://www.tcc.or.th/tcc_media/06102565_qa/"
-    },
-    {
-      "title": "รู้เท่าทันขบวนการ “หลอกลงทุนออนไลน์ ” ป้องถูกโกงออนไลน์",
-      "url": "https://www.tcc.or.th/tcc_media/23092565_inventor_info/"
-    },
-    {
-      "title": "สินค้าไม่ดี – สินค้าชำรุด แก้ได้ด้วย ‘Lemon Law’",
-      "url": "https://www.tcc.or.th/tcc_media/lemon-law/"
-    },
-    {
-      "title": "ฉลากอาหารไม่มีภาษาไทย ผิดกฎหมาย! ผู้บริโภคร้องเรียนได้",
-      "url": "https://www.tcc.or.th/tcc_media/04092022_lable_artwork/"
-    },
-    {
-      "title": "ก่อนเสริมความงาม…ผู้บริโภคควรรู้อะไรบ้าง",
-      "url": "https://www.tcc.or.th/tcc_media/16082565_cosmetic-surgery_atrwork/"
-    },
-    {
-      "title": "ยาโมลนูพิราเวียร์ (MoInupiravir) ผู้บริโภคอย่าซื้อกินเอง เสี่ยงอัตรายต่อสุขภาพ",
-      "url": "https://www.tcc.or.th/tcc_media/04082565_moinupiravir_info/"
-    },
-    {
-      "title": "เปิด ‘กลลวงโจรออนไลน์’ ที่ต้องรู้ทัน",
-      "url": "https://www.tcc.or.th/tcc_media/scam_artwork/"
-    },
-    {
-      "title": "สภาผู้บริโภครับร้องเรียน ผู้บริโภคแพ้กาแฟกัญชาจากตู้กด เสี่ยงภัยสุขภาพ",
-      "url": "https://www.tcc.or.th/tcc_media/allergic-to-cannabis-coffee/"
-    },
-    {
-      "title": "ซื้อคูปองแต่ใช้ไม่ได้จริง เรียกร้องความเสียหายทันที",
-      "url": "https://www.tcc.or.th/tcc_media/daruma-coupon/"
-    },
-    {
-      "title": "เจ้าหนี้ ‘ห้ามทวงหนี้’ แบบไหน? ชวนรู้จัก กฎการทวงหนี้",
-      "url": "https://www.tcc.or.th/tcc_media/debt/"
-    },
-    {
-      "title": "ปรับขึ้น ‘ค่าการกลั่น’ สาเหตุน้ำมันแพง",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%9b%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%82%e0%b8%b6%e0%b9%89%e0%b8%99-%e0%b8%84%e0%b9%88%e0%b8%b2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%a5%e0%b8%b1%e0%b9%88%e0%b8%99-%e0%b8%aa%e0%b8%b2/"
-    },
-    {
-      "title": "เลือกคาร์ซีทอย่างไร?…ให้ปลอดภัย",
-      "url": "https://www.tcc.or.th/tcc_media/info-how-to-choose-carseat/"
-    },
-    {
-      "title": "ทำไมต้องค้านการควบรวมกิจการ ‘ทรู – ดีแทค’ ?",
-      "url": "https://www.tcc.or.th/tcc_media/07062565-info-oppose-dtac-true/"
-    },
-    {
-      "title": "หยุดแก๊งคอลเซ็นเตอร์ก่อกวน-หลอกลวง ด้วย “แอปฯ” ได้ที่นี่",
-      "url": "https://www.tcc.or.th/tcc_media/call-block-application/"
-    },
-    {
-      "title": "ขายของออนไลน์ไม่แจ้งราคาสินค้า ผู้บริโภคมีสิทธิร้องเรียนได้",
-      "url": "https://www.tcc.or.th/tcc_media/price-onlineshopping/"
-    },
-    {
-      "title": "ทำ OT วันแรงงาน ต้องได้เงิน 3 เท่า",
-      "url": "https://www.tcc.or.th/tcc_media/02052565_info-labours-day/"
-    },
-    {
-      "title": "‘วันแรงงาน’ ลูกจ้างต้องได้หยุดงาน และได้เงินด้วยนะ",
-      "url": "https://www.tcc.or.th/tcc_media/01052565_info-labours-day/"
-    },
-    {
-      "title": "ขายทองอย่างไร ไม่ถูกกดราคาหรือโดนโกง",
-      "url": "https://www.tcc.or.th/tcc_media/gold/"
-    },
-    {
-      "title": "พบ ‘เงินโอนเข้าผิดบัญชี’ อย่ารีบโอนกลับ อาจเป็นกับดักมิจฉาชีพ!",
-      "url": "https://www.tcc.or.th/tcc_media/wrong-transfer/"
-    },
-    {
-      "title": "2 ข้อ ที่ผู้ซื้อประกันภัย ‘อาคเนย์’ ต้องรู้",
-      "url": "https://www.tcc.or.th/tcc_media/info-arcane-insurance/"
-    },
-    {
-      "title": "เปิดสถิติ ‘ข้ามถนน’ บน ‘ทางม้าลาย’ ในประเทศไทยปลอดภัยแค่ไหน?",
-      "url": "https://www.tcc.or.th/tcc_media/info-crosswalk/"
-    },
-    {
-      "title": "8 ปีกับอุบัติเหตุบน ‘ทางม้าลาย’ : ปัญหาที่ไม่ถูกแก้ไขอย่างจริงจัง",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%84%e0%b8%99%e0%b9%80%e0%b8%94%e0%b8%b4%e0%b8%99%e0%b9%80%e0%b8%97%e0%b9%89%e0%b8%b2-%e0%b9%83%e0%b8%99%e0%b9%84%e0%b8%97%e0%b8%a2-%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%96/"
-    },
-    {
-      "title": "ผู้บริโภคต้องได้กินเนื้อหมูที่ปลอดสาร ชวนรู้ ‘สารเร่งเนื้อแดง’ อันตรายต่อสุขภาพอย่างไร",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a0%e0%b8%b2%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b9%8c%e0%b8%81%e0%b8%a3%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-2/"
-    },
-    {
-      "title": "สภาองค์กรผู้บริโภคเสนอ วิธีแก้ ‘ปัญหาน้ำมัน’ แพงช่วยประชาชน",
-      "url": "https://www.tcc.or.th/tcc_media/how-to-fix-expensive-oil/"
-    },
-    {
-      "title": "ผู้บริโภค ซื้อของมา ไม่ตรงปก ต้องทำอย่างไร ?",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%b2-%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%95%e0%b8%a3%e0%b8%87%e0%b8%9b%e0%b8%81-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%87-2/"
-    },
-    {
-      "title": "ปัญหาสั่งของ แต่ได้ไม่ตรงปก มาอีกแล้ว",
-      "url": "https://www.tcc.or.th/tcc_media/shopping-online/"
-    },
-    {
-      "title": "เช็กก่อน! จะตัดสินใจเป็นอาสาสมัคร “งานวิจัยฉีดวัคซีน”",
-      "url": "https://www.tcc.or.th/tcc_media/vaccine/"
-    },
-    {
-      "title": "เผลอกดข้อเสนอที่ประกันส่งมา แต่อยากยกเลิก ต้องทำอย่างไร?",
-      "url": "https://www.tcc.or.th/tcc_media/cancle-insurance/"
-    },
-    {
-      "title": "เคลมประกันโควิด ‘เจอจ่ายจบ’ ไม่ได้ ร้องเรียนที่สภาองค์กรของผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b9%80%e0%b8%84%e0%b8%a5%e0%b8%a1%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%99%e0%b9%82%e0%b8%84%e0%b8%a7%e0%b8%94-%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%88%e0%b8%b2%e0%b8%a2%e0%b8%88%e0%b8%9a/"
-    },
-    {
-      "title": "เจอข้อความจากบริษัทประกันภัย อย่าเพิ่งรีบกดตอบรับ",
-      "url": "https://www.tcc.or.th/tcc_media/insurance-covid/"
-    },
-    {
-      "title": "11.11 นี้ เสียหายไปเท่าไหร่กันบ้างกับของไม่ตรงปก",
-      "url": "https://www.tcc.or.th/tcc_media/flash-sale/"
-    },
-    {
-      "title": "สภาผู้บริโภคแนะ 6 ข้อ ซื้อประกันสุขภาพคุ้มค่า ลดความเสี่ยงให้ผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/buy-insurance/"
-    },
-    {
-      "title": "กู้คอนโดไม่ผ่าน โครงการไม่มีสิทธิยึดเงินดาวน์หรือเงินจอง",
-      "url": "https://www.tcc.or.th/tcc_media/loan-condo/"
-    },
-    {
-      "title": "| เรื่องเล่าผู้บริโภค | แชร์ประสบการณ์สั่งของมาแต่ไม่ตรงปก",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b9%80%e0%b8%a3%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%a5%e0%b9%88%e0%b8%b2%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-%e0%b9%81%e0%b8%8a/"
-    },
-    {
-      "title": "สรุปข่าวและประเด็นผู้บริโภคที่น่าสนใจ เดือนตุลาคม",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a3%e0%b8%b8%e0%b8%9b%e0%b8%82%e0%b9%88%e0%b8%b2%e0%b8%a7%e0%b9%81%e0%b8%a5%e0%b8%b0%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%94%e0%b9%87%e0%b8%99%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a/"
-    },
-    {
-      "title": "อยากยกเลิกสัญญาจองโมเดอร์นา โหลดแบบฟอร์มเลย!",
-      "url": "https://www.tcc.or.th/tcc_media/cancle-moderna/"
-    },
-    {
-      "title": "เตือนภัย!! เพจ ‘หลอกขายรถจักรยานไฟฟ้า’",
-      "url": "https://www.tcc.or.th/tcc_media/electric-bike/"
-    },
-    {
-      "title": "ระบบตั๋วร่วมในต่างประเทศ พกบัตรใบเดียว ขึ้นขนส่งมวลชนอะไรได้บ้าง?",
-      "url": "https://www.tcc.or.th/tcc_media/contactless-smart-card/"
-    },
-    {
-      "title": "สภาองค์กรของผู้บริโภค ทำอะไรบ้าง",
-      "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a0%e0%b8%b2%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b9%8c%e0%b8%81%e0%b8%a3%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-%e0%b8%97%e0%b8%b3%e0%b8%ad%e0%b8%b0/"
-    },
-    {
-      "title": "สิทธิผู้บริโภคสากล 8 ประการ เกราะคุ้มกันผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/world-consumer-rights/"
-    },
-    {
-      "title": "รู้จัก หน้ากาก KF94 ป้องกันสุขภาพผู้บริโภคจาก PM2.5 ได้อย่างไร ?",
-      "url": "https://www.tcc.or.th/tcc_media/maskkf94-infographic-3/"
-    },
-    {
-      "title": "การเปิดเผยข้อมูลที่มาของราคารถไฟฟ้าสายสีเขียว เป็นสิ่งจำเป็น",
-      "url": "https://www.tcc.or.th/tcc_media/06072021-quote-bts/"
-    },
-    {
-      "title": "8 หน้าที่หลัก ‘สภาองค์กรของผู้บริโภค’ คุ้มครองและพิทักษ์สิทธิผู้บริโภค",
-      "url": "https://www.tcc.or.th/tcc_media/28062564_info-tcc-duty/"
-    },
-    {
-      "title": "กว่าจะเป็น ‘สภาองค์กรของผู้บริโภค’",
-      "url": "https://www.tcc.or.th/tcc_media/26062654_info-tcc-timeline/"
-    },
-    {
-      "title": "‘ผู้บริโภค’ จะเป็นอย่างไร ถ้าไทยเข้าร่วม CPTPP",
-      "url": "https://www.tcc.or.th/tcc_media/19062564_info_cptpp/"
-    },
-    {
-      "title": "7 มิถุนายน วันความปลอดภัยอาหารโลก",
-      "url": "https://www.tcc.or.th/tcc_media/world-food-safety-day/"
-    },
-    {
-      "title": "ถาม – ตอบ : ข้อเสนอกรณีสัมปทาน BTS",
-      "url": "https://www.tcc.or.th/tcc_media/qa-bts/"
-    }
-  ]
+[
+  {
+    "title": "6 เทคนิค ขับรถลุยน้ำท่วม ให้ปลอดภัย",
+    "url": "https://www.tcc.or.th/tcc_media/cars-driving-through-a-flood/"
+  },
+  {
+    "title": "ขาย “ทุเรียนอ่อน” ผิดกฎหมาย พบเจอ “แจ้งความ – ร้องเรียน” ได้เลย",
+    "url": "https://www.tcc.or.th/tcc_media/immature-durian/"
+  },
+  {
+    "title": "รู้ก่อนใช้ ทิชชูเปียก เลือกยังไงให้ปลอดภัย",
+    "url": "https://www.tcc.or.th/tcc_media/wet-wipes/"
+  },
+  {
+    "title": "ร้อนนี้ ระวัง! ของต้องห้าม อย่าทิ้งไว้ในรถ",
+    "url": "https://www.tcc.or.th/tcc_media/never-leave-in-your-car/"
+  },
+  {
+    "title": "พัสดุสูญหาย จัดส่งล่าช้า ผู้บริโภคมีสิทธิได้รับชดเชย",
+    "url": "https://www.tcc.or.th/tcc_media/transport-goods/"
+  },
+  {
+    "title": "4 เช็ก เพจปลอม ให้ชัวร์ก่อนจองที่พัก",
+    "url": "https://www.tcc.or.th/tcc_media/4-check-fake-page/"
+  },
+  {
+    "title": "4.4 นี้ ยึดหลัก 4 ต. ซื้อของออนไลน์ให้ปลอดภัย",
+    "url": "https://www.tcc.or.th/tcc_media/4-4-shop-online/"
+  },
+  {
+    "title": "อาคารเสียหายจากแผ่นดินไหว เลือกผู้ตรวจสอบอย่างไรให้ได้มาตรฐาน",
+    "url": "https://www.tcc.or.th/tcc_media/earthquake-building-inspector/"
+  },
+  {
+    "title": "เสียหายจากแผ่นดินไหว ต้องเคลมประกันอย่างไร",
+    "url": "https://www.tcc.or.th/tcc_media/earthquake-insurance-claim/"
+  },
+  {
+    "title": "เรียกร้องทบทวน Co-payment เพื่อความเป็นธรรมและลดภาระผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/co-payment/"
+  },
+  {
+    "title": "ก่อนเข้าคลินิกทำฟัน อย่าลืมดูใบอนุญาตเปิดคลินิกทันตกรรมด้วย",
+    "url": "https://www.tcc.or.th/tcc_media/dental-clinic/"
+  },
+  {
+    "title": "พบร้านค้าฉวยโอกาสขึ้นราคาในช่วง วาเลนไทน์ ทำยังไงดี",
+    "url": "https://www.tcc.or.th/tcc_media/valentine/"
+  },
+  {
+    "title": "รู้ทันทุก ‘ปัญหาแก๊ส’ รวมช่องทางติดต่อที่ต้องรู้",
+    "url": "https://www.tcc.or.th/tcc_media/gas-cylinder-complaint/"
+  },
+  {
+    "title": "ผู้บริโภคต้องรู้ โฆษณาเสริมความงามแบบไหน ไม่ผิดกฎหมาย?",
+    "url": "https://www.tcc.or.th/tcc_media/cosmetic-surgery/"
+  },
+  {
+    "title": "ตกเป็นเหยื่อ ‘แอปกู้เงินเถื่อน’ ต้องทำยังไง",
+    "url": "https://www.tcc.or.th/tcc_media/illegal-money-loan-apps/"
+  },
+  {
+    "title": "ถูกเรียกเก็บค่ารักษาพยาบาล ทั้งที่ไม่ควรจ่าย ร้องเรียนได้",
+    "url": "https://www.tcc.or.th/tcc_media/expenses/"
+  },
+  {
+    "title": "ผู้บริโภคเจ็บป่วยวิกฤต ใช้สิทธิ UCEP ได้ทุกที่ไม่มีค่าใช้จ่าย หากพบปัญหารีบร้องเรียน",
+    "url": "https://www.tcc.or.th/tcc_media/ucep/"
+  },
+  {
+    "title": "รู้ทันก่อนเสียอนาคต! รับเปิดบัญชีม้า – ซิมม้า โทษหนักถึงคุก",
+    "url": "https://www.tcc.or.th/tcc_media/mule-account-scam/"
+  },
+  {
+    "title": "สภาองค์กรผู้บริโภคชวนเช็กเอกสารหลักฐานที่ต้องได้ ตอนเอารถเข้าอู่ซ่อม ป้องกันผู้บริโภคโดนเอาเปรียบ",
+    "url": "https://www.tcc.or.th/tcc_media/repair-garage-recipt/"
+  },
+  {
+    "title": "จอง ‘ห้องพัก’ อย่างไรให้ปลอดภัย ไม่ให้ถูกหลอก",
+    "url": "https://www.tcc.or.th/tcc_media/howto-choose-best-hotel/"
+  },
+  {
+    "title": "เปิดวิธีแก้ปัญหาจองตั๋วเครื่องบินแล้วถูกยกเลิก พร้อมขอเงินคืนอย่างมั่นใจ",
+    "url": "https://www.tcc.or.th/tcc_media/book-tickets/"
+  },
+  {
+    "title": "เช็กของได้ก่อนจ่ายเงินปลายทาง ปฏิเสธไม่รับ ขอเงินคืนได้ ตามมาตรการส่งดี (Dee Delivery)",
+    "url": "https://www.tcc.or.th/tcc_media/3-oct-dee-delivery/"
+  },
+  {
+    "title": "ซื้อ ‘ทองรูปพรรณ’ มาแต่คุณภาพไม่ตรงตามโฆษณา ขอเงินคืนได้เต็มจำนวน",
+    "url": "https://www.tcc.or.th/tcc_media/not-as-advertised-gold/"
+  },
+  {
+    "title": "เปิด 5 ขั้นตอน ซื้อทองคำอย่างไร ให้ปลอดภัย ไม่โดนหลอก",
+    "url": "https://www.tcc.or.th/tcc_media/howto-buy-gold/"
+  },
+  {
+    "title": "เช็กให้ครบ ก่อนตัดสินใจเช่า ‘หอพัก – คอนโด’ ต้องตรวจสอบตามนี้",
+    "url": "https://www.tcc.or.th/tcc_media/check-list-condo/"
+  },
+  {
+    "title": "สภาผู้บริโภคแนะผู้บริโภค ใส่ใจ ใส่บาตร เพื่อสุขภาพของพระสงฆ์",
+    "url": "https://www.tcc.or.th/tcc_media/buddhist-monk-food/"
+  },
+  {
+    "title": "สายรีวิวต้องดู รีวิวสินค้ายังไง ไม่เสี่ยงถูกฟ้องหมิ่น",
+    "url": "https://www.tcc.or.th/tcc_media/review-sue-for-defamation/"
+  },
+  {
+    "title": "ซื้อปากกาลดน้ำหนักใช้เอง เสี่ยงสูงต่อสุขภาพ! ผู้บริโภคต้องใช้ตามแพทย์สั่งเท่านั้น",
+    "url": "https://www.tcc.or.th/tcc_media/weight-loss-pen-side-effect/"
+  },
+  {
+    "title": "วิกฤตภัยการเงินออนไลน์ กับการคุ้มครองผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/finance-technology-crimes/"
+  },
+  {
+    "title": "ผู้บริโภคระวัง! ไซบูทรามีน สารอันตรายในอาหารเสริม ผอมชั่วคราวสุขภาพพังยาว",
+    "url": "https://www.tcc.or.th/tcc_media/sibutramine-hazard/"
+  },
+  {
+    "title": "แนะผู้บริโภค ‘เลิกบุหรี่’ อย่างไรให้ได้ผล และปลอดภัยต่อสุขภาพ",
+    "url": "https://www.tcc.or.th/tcc_media/31052567_quit-smoking_info/"
+  },
+  {
+    "title": "6 ข้อแนะนำ ยืดอายุแบตเตอรี่รถยนต์ไฟฟ้า",
+    "url": "https://www.tcc.or.th/tcc_media/6tips-ev-batterylifecycle/"
+  },
+  {
+    "title": "5 เรื่องสำคัญต้องดู ก่อนเลือกซื้อ ‘คอนโด’ ป้องกันปัญหาไม่ตรงปก – สัญญาไม่เป็นธรรม",
+    "url": "https://www.tcc.or.th/tcc_media/condo-checklist/"
+  },
+  {
+    "title": "เช็กก่อนใช้ ระวังอันตรายหากใช้ถังแก๊สหมดอายุ",
+    "url": "https://www.tcc.or.th/tcc_media/gas-tank-expired-dangerous/"
+  },
+  {
+    "title": "เผลอทำประกันทางโทรศัพท์ไปแล้ว ก็สามารถยกเลิกได้",
+    "url": "https://www.tcc.or.th/tcc_media/insurance-cancel/"
+  },
+  {
+    "title": "วันแรงงาน แต่ต้องทำงาน… ต้องได้หยุดชดเชยในวันอื่น หรือได้ค่าแรงเพิ่มไม่น้อยกว่าหนึ่งเท่า",
+    "url": "https://www.tcc.or.th/tcc_media/01052567_lobors-day_artwork/"
+  },
+  {
+    "title": "ระวังใช้หัวชาร์จรถยนต์ไฟฟ้าผิดประเภท เช็กก่อนแบบไหนชาร์จช้า – ชาร์จเร็ว",
+    "url": "https://www.tcc.or.th/tcc_media/evcar-charger/"
+  },
+  {
+    "title": "ระวัง ‘ทัวร์เถื่อน’ อย่าลืมเช็กข้อมูลก่อนซื้อทัวร์",
+    "url": "https://www.tcc.or.th/tcc_media/09042567_fake-tour_info/"
+  },
+  {
+    "title": "สงกรานต์นี้ เลือกซื้อปืนฉีดน้ำปลอดภัย ต้องมี มอก. คู่กับคิวอาร์โค้ด",
+    "url": "https://www.tcc.or.th/tcc_media/water-gun-safety/"
+  },
+  {
+    "title": "แจ้งเตือน… ผู้เสียหาย ‘หุ้นกู้สตาร์ก’ ยื่นคำขอรับชำระหนี้ภายในวันที่ 11 เม.ย. 67",
+    "url": "https://www.tcc.or.th/tcc_media/03042567_stark-investment-warning_info/"
+  },
+  {
+    "title": "ผู้เสียหาย ‘มาสด้า ซีเอ็กซ์ – 5 สกายแอคทีฟ ดีเซล’ เช็กเงื่อนไขการเยียวยา ที่นี่",
+    "url": "https://www.tcc.or.th/tcc_media/mazda-cx-5-extended-warranty/"
+  },
+  {
+    "title": "เอไอใกล้ตัว",
+    "url": "https://www.tcc.or.th/tcc_media/ai-in-dailylife/"
+  },
+  {
+    "title": "หนี้สินรุมเร้า ผู้บริโภคต้องเข้ามาตรการแก้หนี้ ของธนาคารแห่งประเทศไทย (ธปท.)",
+    "url": "https://www.tcc.or.th/tcc_media/21022024-responsible-lending/"
+  },
+  {
+    "title": "ขอ 10,000 ชื่อ ‘ปฏิรูปกฎหมายเครดิตบูโร’",
+    "url": "https://www.tcc.or.th/tcc_media/credit-bureau-reform-campaign/"
+  },
+  {
+    "title": "เปิด 3 เกณฑ์สำคัญ ธนาคารต้องทำ ปล่อยสินเชื่อ ห้ามกระตุ้นคนก่อหนี้",
+    "url": "https://www.tcc.or.th/tcc_media/3-conditions-credit/"
+  },
+  {
+    "title": "เลือกซื้อของไหว้ตรุษจีนให้ปังตลอดปี",
+    "url": "https://www.tcc.or.th/tcc_media/chinese-newyear/"
+  },
+  {
+    "title": "6 ปี อุบัติเหตุพระราม 2 เสียชีวิต 132 ราย",
+    "url": "https://www.tcc.or.th/tcc_media/19012567_rama2roadaccidentinfographic/"
+  },
+  {
+    "title": "ต้มน้ำกระท่อมขาย = ผิดกฎหมายเต็ม ๆ",
+    "url": "https://www.tcc.or.th/tcc_media/illegal_kratom-water/"
+  },
+  {
+    "title": "รถไฟฟ้าสาย “ชมพู-เหลือง” พึ่งเปิดใช้งาน เกิดอุบัติเหตุ 2 ครั้ง ความปลอดภัยผู้บริโภคอยู่ที่ไหน",
+    "url": "https://www.tcc.or.th/tcc_media/04012567_publictrainaccidentinfographic/"
+  },
+  {
+    "title": "5 สิทธิผู้บริโภคต้องรู้ เพื่อใช้บริการมือถือไม่ให้เสียเปรียบ",
+    "url": "https://www.tcc.or.th/tcc_media/5rights-usemobileservice/"
+  },
+  {
+    "title": "ผู้เสียหายจากอุบัติเหตุรถสารสาธารณะ อย่าเซ็นรับเงินเยียวยา ถ้ายังไม่ได้ทำตาม 4 ข้อนี้",
+    "url": "https://www.tcc.or.th/tcc_media/accident-not-sign/"
+  },
+  {
+    "title": "เช็กเลย! สิทธิที่ต้องได้ทันที เมื่อบาดเจ็บ – เสียชีวิตจากอุบัติเหตุโดยรถสาธารณะ",
+    "url": "https://www.tcc.or.th/tcc_media/accident-check/"
+  },
+  {
+    "title": "เปิดนโยบาย 6 ทีม ชิงบอร์ดประกันสังคม",
+    "url": "https://www.tcc.or.th/tcc_media/vote-board-sso/"
+  },
+  {
+    "title": "กลุ่มผู้เสียหาย มาสด้า 2 สกายแอคทีฟ ดีเซล อย่าลืม! ยื่นคำขอรับชำระหนี้  ภายในวันที่ 12 เม.ย. 67",
+    "url": "https://www.tcc.or.th/tcc_media/06122566_mazda2_info/"
+  },
+  {
+    "title": "สายเที่ยวจองทัวร์ แล้วโดนเท ต้องทำอย่างไร",
+    "url": "https://www.tcc.or.th/tcc_media/booking-tour-failed/"
+  },
+  {
+    "title": "ผลสำรวจความต้องการรถไฟฟ้าสายสีชมพูสูงสุด 20 บาท",
+    "url": "https://www.tcc.or.th/tcc_media/30112566_pinklinesurveyinfographic/"
+  },
+  {
+    "title": "เผยเคล็ดลับเลือกผู้ตรวจสอบอาคาร ให้ได้บ้านดี ปลอดภัย ได้มาตรฐาน",
+    "url": "https://www.tcc.or.th/tcc_media/building-inspector/"
+  },
+  {
+    "title": "11.11 ชอปอย่างมีสติ รู้ให้ทันป้องกันโดนหลอก",
+    "url": "https://www.tcc.or.th/tcc_media/11-11-shopping-sale/"
+  },
+  {
+    "title": "แนะวิธีการยืนยันตัวตน 2 ระดับ เพิ่มความปลอดภัยในการใช้งานไลน์ ป้องกันมิจฉาชีพ",
+    "url": "https://www.tcc.or.th/tcc_media/28112566_lineidentification/"
+  },
+  {
+    "title": "ขอ 10,000 ชื่อ ร่วมสนับสนุนกฎหมาย เปลี่ยนเบี้ยยังชีพ เป็น ‘บำนาญถ้วนหน้า’",
+    "url": "https://www.tcc.or.th/tcc_media/pension-campaign-031166/"
+  },
+  {
+    "title": "‘บำนาญถ้วนหน้า’ หลักประกันยามสูงวัย",
+    "url": "https://www.tcc.or.th/tcc_media/why-pension-021166/"
+  },
+  {
+    "title": "Trick or Treat ซื้อขนมอย่างไร ไม่ให้ถูก “หลอก”",
+    "url": "https://www.tcc.or.th/tcc_media/trick-or-treat-2023/"
+  },
+  {
+    "title": "ผู้บริโภคต้องรู้! ซื้อประกันสุขภาพอย่างไร ไม่ให้เกิดปัญหาเคลมประกันไม่ได้",
+    "url": "https://www.tcc.or.th/tcc_media/28092566_healthinsurance-claim-consumer/"
+  },
+  {
+    "title": "ผู้รับเหมาใช้วัสดุผิดสเปก ถือว่าผิดกฎหมาย ร้องเรียนได้ทันที",
+    "url": "https://www.tcc.or.th/tcc_media/contractor-wrong-spec/"
+  },
+  {
+    "title": "ซื้ออาหารเจสำเร็จรูปให้ปลอดภัยต่อสุขภาพ ผู้บริโภคต้องสังเกตฉลากอะไรบ้าง",
+    "url": "https://www.tcc.or.th/tcc_media/191066-j-festival-info/"
+  },
+  {
+    "title": "เปิดสถิติการเกิดอุบัติเหตุในรอบ 5 ปีบนถนนพระราม 2",
+    "url": "https://www.tcc.or.th/tcc_media/30092566_rama2roadaccident/"
+  },
+  {
+    "title": "เปิดไทม์ไลน์ ก่อสร้างถนนพระราม 2 สร้าง 50 ปี ไม่เสร็จสักที",
+    "url": "https://www.tcc.or.th/tcc_media/30092566_rama2_construction_infographic/"
+  },
+  {
+    "title": "ค่าไฟลดแล้ว! เตือน ผู้ให้เช่า-ผู้เช่า ห้องพัก หอ เช็กบิลค่าไฟเดือน กย. ให้ตรงกัน ต้อง 3.99 บาท/หน่วย เท่านั้น",
+    "url": "https://www.tcc.or.th/tcc_media/electricity-bill/"
+  },
+  {
+    "title": "สภาผู้บริโภค เสนอ 9 นโยบายคุ้มครองผู้บริโภค เพื่อคุณภาพชีวิตที่ดีของทุกคน",
+    "url": "https://www.tcc.or.th/tcc_media/06092566_tcc-9-proposals_info/"
+  },
+  {
+    "title": "ผู้บริโภคจะซื้อ ‘ตุ๊กตา’ ต้องเลือกที่ปลอดภัยมองหาเครื่องหมาย มอก. กับคิวอาร์โค้ด",
+    "url": "https://www.tcc.or.th/tcc_media/safe-toys/"
+  },
+  {
+    "title": "จะกินของดี แต่ได้ของเสีย หมดอายุ ผู้บริโภคร้องเรียนได้ไหม?",
+    "url": "https://www.tcc.or.th/tcc_media/food-expired/"
+  },
+  {
+    "title": "ใช้แอปเรียกรถ แล้วได้รับอันตราย ต้องทำอย่างไร?",
+    "url": "https://www.tcc.or.th/tcc_media/ridesharing-app/"
+  },
+  {
+    "title": "ใช้บริการรถประจำทาง เจอ “ขับซิ่ง รถเหม็น โดนเท ตั๋วแพง” ร้องเรียนได้เลย!",
+    "url": "https://www.tcc.or.th/tcc_media/290766-complaint-transport/"
+  },
+  {
+    "title": "ชาร์จรถไฟฟ้าในบ้าน ต้องเตรียมอะไรบ้าง ติดตั้งอย่างไร",
+    "url": "https://www.tcc.or.th/tcc_media/26072566_ev-charger_info/"
+  },
+  {
+    "title": "ถูกบังคับผ่อนมอเตอร์ไซค์ ทั้งที่จะซื้อสด เจอแบบนี้ต้องทำอย่างไร?",
+    "url": "https://www.tcc.or.th/tcc_media/buy-motorcycle-2/"
+  },
+  {
+    "title": "อย่าลืมเช็ก 4 ข้อ ก่อนโอนเงินซื้อของ",
+    "url": "https://www.tcc.or.th/tcc_media/4-checked-online-shopping_info/"
+  },
+  {
+    "title": "ร้านค้าออนไลน์ในเฟซบุ๊กมาเก็ตเพลส ปลอดภัยจริงหรือไม่?",
+    "url": "https://www.tcc.or.th/tcc_media/facebook-marketplace/"
+  },
+  {
+    "title": "ผู้บริโภคสายสุขภาพช็อก! กินขนมคลีนหวังผอม แต่ทำไมยิ่งกินยิ่งอ้วน?",
+    "url": "https://www.tcc.or.th/tcc_media/clean-snacks/"
+  },
+  {
+    "title": "โดนโกงออนไลน์ สั่งของแล้วไม่ได้ / ของไม่ตรงปก / ได้ของปลอม รีบทำ 3 ขั้นตอนนี้",
+    "url": "https://www.tcc.or.th/tcc_media/13062566_online-fruad_info/"
+  },
+  {
+    "title": "ผู้บริโภคโดนหลอกขายสินค้า – โดนโกงออนไลน์ หรือโดนแฮกข้อมูล แจ้งความที่สถานีตำรวจได้ทุกท้องที่",
+    "url": "https://www.tcc.or.th/tcc_media/police-online-service/"
+  },
+  {
+    "title": "เช็กให้ชัวร์! ก่อนช้อปสินค้าออนไลน์ ป้องกันโดนโกง",
+    "url": "https://www.tcc.or.th/tcc_media/check-before-you-pay/"
+  },
+  {
+    "title": "เจอแมลง เศษพลาสติก หนังยางในอาหาร อย่าโยนทิ้ง! ถ่ายรูป เก็บหลักฐานแล้วร้องเรียน",
+    "url": "https://www.tcc.or.th/tcc_media/contaminated-food/"
+  },
+  {
+    "title": "วิธีจัดและเลือกซื้อ ‘ชุดสังฆทาน’",
+    "url": "https://www.tcc.or.th/tcc_media/offerings-for-the-monks/"
+  },
+  {
+    "title": "ตักบาตรอย่างไร ให้ (พระสงฆ์) ห่างไกลโรค",
+    "url": "https://www.tcc.or.th/tcc_media/offer-goodfood-to-the-monk/"
+  },
+  {
+    "title": "การกำกับดูแลการแข่งขันธุรกิจแพลตฟอร์ม e-Marketplace ในประเทศไทย",
+    "url": "https://www.tcc.or.th/tcc_media/26052566_e-marketplace-report/"
+  },
+  {
+    "title": "ช้อปอย่างไรไม่ให้พลาด? สภาผู้บริโภคชวนเช็ก ‘คิวอาร์โค้ด’  พร้อมเครื่องหมาย มอก. แบบใหม่",
+    "url": "https://www.tcc.or.th/tcc_media/qrcode-with-tis/"
+  },
+  {
+    "title": "เปิดลิสต์ 16 สินค้าและบริการห้ามขาย! เสี่ยงอันตรายต่อสุขภาพผู้บริโภค ตามประกาศ สคบ.",
+    "url": "https://www.tcc.or.th/tcc_media/ocpb-goods-blacklist/"
+  },
+  {
+    "title": "ร้องเรียนสภาผู้บริโภค กินชาบูแล้วโดนไฟดูด ผู้บริโภคทำอย่างไรดี?",
+    "url": "https://www.tcc.or.th/tcc_media/food-shabu/"
+  },
+  {
+    "title": "เจอ “ทัวร์ไม่ตรงปก” ผู้บริโภคสายเที่ยว ร้องเรียนที่ไหน?",
+    "url": "https://www.tcc.or.th/tcc_media/travel-agency/"
+  },
+  {
+    "title": "แนะผู้ปกครองอย่าลืมเช็กใบเสร็จหลังซื้อสินค้าทุกครั้ง ระวังราคาไม่ตรงป้าย!",
+    "url": "https://www.tcc.or.th/tcc_media/school-uniform/"
+  },
+  {
+    "title": "7 เคล็ด (ไม่) ลับ เมื่อชาร์จรถไฟฟ้าในที่สาธารณะ",
+    "url": "https://www.tcc.or.th/tcc_media/ev-in-public/"
+  },
+  {
+    "title": "เมื่อคลินิกปิดกิจการ แต่ตัดเงินผ่านบัตรเครดิตไปแล้ว ทำยังไงดี?",
+    "url": "https://www.tcc.or.th/tcc_media/clinic-creditcard/"
+  },
+  {
+    "title": "มอเตอร์ไซค์ขับขี่มั่นใจ ปลอดภัยด้วยระบบเบรก ABS",
+    "url": "https://www.tcc.or.th/tcc_media/abs-motorcycle/"
+  },
+  {
+    "title": "รวมปัญหายอดฮิตของรถยนต์ไฟฟ้า พร้อมวิธีแก้เบื้องต้น",
+    "url": "https://www.tcc.or.th/tcc_media/howto-solve-ev/"
+  },
+  {
+    "title": "‘พลังงานหมุนเวียน’ มีอะไรบ้าง",
+    "url": "https://www.tcc.or.th/tcc_media/what-is-renewable-energy/"
+  },
+  {
+    "title": "ซื้อสินค้าแล้วมีปัญหา โดนโกง ร้องเรียนที่ไหน ต้องทำอย่างไรบ้าง ?",
+    "url": "https://www.tcc.or.th/tcc_media/howto-complaint-onlineshopping/"
+  },
+  {
+    "title": "ช่วงยื่นภาษี ‘มิจฉาชีพ’ หลอกดูดเงินรูปแบบใหม่ระบาดหนัก",
+    "url": "https://www.tcc.or.th/tcc_media/15022566_scam-revenue_info/"
+  },
+  {
+    "title": "สภาผู้บริโภค เตือน ซื้อประกันสะสมทรัพย์ ผู้บริโภคต้องอ่านข้อมูลสำคัญให้ครบ",
+    "url": "https://www.tcc.or.th/tcc_media/read-insurance/"
+  },
+  {
+    "title": "พบร้านค้าคิดเงินเกินจริง – ราคาไม่ตรงป้าย ผู้บริโภคสามารถเรียกร้องสิทธิในฐานะผู้ซื้อทันที",
+    "url": "https://www.tcc.or.th/tcc_media/exaggerate-price/"
+  },
+  {
+    "title": "“กระเป๋าเดินทางสลับกันที่สนามบิน” ทำยังไงดี?",
+    "url": "https://www.tcc.or.th/tcc_media/03022566_cabin-baggage_info/"
+  },
+  {
+    "title": "ชวนเปลี่ยนถุงลมนิรภัย เปลี่ยนฟรีไม่มีค่าใช้จ่าย",
+    "url": "https://www.tcc.or.th/tcc_media/29122565_chech-airbag_landing/"
+  },
+  {
+    "title": "ต้องดูอะไรบ้าง? ก่อน ‘เช่ารถ’ เที่ยวเทศกาล",
+    "url": "https://www.tcc.or.th/tcc_media/car-rental_caution/"
+  },
+  {
+    "title": "4 ข้อควรรู้ ก่อนซื้อ ‘รถยนต์ไฟฟ้า (EV)’",
+    "url": "https://www.tcc.or.th/tcc_media/ev-tips/"
+  },
+  {
+    "title": "ทำไมต้องใช้ ‘คาร์ซีท’",
+    "url": "https://www.tcc.or.th/tcc_media/why-kids-need-carseats/"
+  },
+  {
+    "title": "12.12 ซื้อของออนไลน์ให้ปลอดภัย ผู้บริโภคต้องยึดหลัก 4 ต.",
+    "url": "https://www.tcc.or.th/tcc_media/12-12_onlineshopping-tips/"
+  },
+  {
+    "title": "เตือนภัย อย่าหลงเชื่อเพจแอบอ้างชื่อ รพ. รับรองเพื่อจำหน่ายบุหรี่ไฟฟ้า",
+    "url": "https://www.tcc.or.th/tcc_media/10122565_e-cigarettes/"
+  },
+  {
+    "title": "เงินในบัญชีหาย…ผู้บริโภคต้องทำอย่างไร",
+    "url": "https://www.tcc.or.th/tcc_media/09122565_if-you-lost-your-money/"
+  },
+  {
+    "title": "ผู้บริโภคต้องระวัง ถูกหลอกลวงขายรถที่ใช้ป้ายทะเบียนปลอม!",
+    "url": "https://www.tcc.or.th/tcc_media/fake_car-label/"
+  },
+  {
+    "title": "ข้อสำคัญต้องรู้ก่อนทำ “สัญญากู้ยืมเงิน”",
+    "url": "https://www.tcc.or.th/tcc_media/23112565_loan-agreement_info/"
+  },
+  {
+    "title": "โรลอัพ สภาองค์กรของผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/28102565-rollup/"
+  },
+  {
+    "title": "ปิดบัญชีเงินกู้ศรีสวัสดิ์ ต้องไม่เสียค่าไถ่โฉนดที่ดินหรือทะเบียนรถ",
+    "url": "https://www.tcc.or.th/tcc_media/13102565_srisawad/"
+  },
+  {
+    "title": "| ถาม – ตอบ | กรณีควบรวม ทรู – ดีแทค",
+    "url": "https://www.tcc.or.th/tcc_media/06102565_qa/"
+  },
+  {
+    "title": "รู้เท่าทันขบวนการ “หลอกลงทุนออนไลน์ ” ป้องถูกโกงออนไลน์",
+    "url": "https://www.tcc.or.th/tcc_media/23092565_inventor_info/"
+  },
+  {
+    "title": "สินค้าไม่ดี – สินค้าชำรุด แก้ได้ด้วย ‘Lemon Law’",
+    "url": "https://www.tcc.or.th/tcc_media/lemon-law/"
+  },
+  {
+    "title": "ฉลากอาหารไม่มีภาษาไทย ผิดกฎหมาย! ผู้บริโภคร้องเรียนได้",
+    "url": "https://www.tcc.or.th/tcc_media/04092022_lable_artwork/"
+  },
+  {
+    "title": "ก่อนเสริมความงาม…ผู้บริโภคควรรู้อะไรบ้าง",
+    "url": "https://www.tcc.or.th/tcc_media/16082565_cosmetic-surgery_atrwork/"
+  },
+  {
+    "title": "ยาโมลนูพิราเวียร์ (MoInupiravir) ผู้บริโภคอย่าซื้อกินเอง เสี่ยงอัตรายต่อสุขภาพ",
+    "url": "https://www.tcc.or.th/tcc_media/04082565_moinupiravir_info/"
+  },
+  {
+    "title": "เปิด ‘กลลวงโจรออนไลน์’ ที่ต้องรู้ทัน",
+    "url": "https://www.tcc.or.th/tcc_media/scam_artwork/"
+  },
+  {
+    "title": "สภาผู้บริโภครับร้องเรียน ผู้บริโภคแพ้กาแฟกัญชาจากตู้กด เสี่ยงภัยสุขภาพ",
+    "url": "https://www.tcc.or.th/tcc_media/allergic-to-cannabis-coffee/"
+  },
+  {
+    "title": "ซื้อคูปองแต่ใช้ไม่ได้จริง เรียกร้องความเสียหายทันที",
+    "url": "https://www.tcc.or.th/tcc_media/daruma-coupon/"
+  },
+  {
+    "title": "เจ้าหนี้ ‘ห้ามทวงหนี้’ แบบไหน? ชวนรู้จัก กฎการทวงหนี้",
+    "url": "https://www.tcc.or.th/tcc_media/debt/"
+  },
+  {
+    "title": "ปรับขึ้น ‘ค่าการกลั่น’ สาเหตุน้ำมันแพง",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%9b%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%82%e0%b8%b6%e0%b9%89%e0%b8%99-%e0%b8%84%e0%b9%88%e0%b8%b2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%a5%e0%b8%b1%e0%b9%88%e0%b8%99-%e0%b8%aa%e0%b8%b2/"
+  },
+  {
+    "title": "เลือกคาร์ซีทอย่างไร?…ให้ปลอดภัย",
+    "url": "https://www.tcc.or.th/tcc_media/info-how-to-choose-carseat/"
+  },
+  {
+    "title": "ทำไมต้องค้านการควบรวมกิจการ ‘ทรู – ดีแทค’ ?",
+    "url": "https://www.tcc.or.th/tcc_media/07062565-info-oppose-dtac-true/"
+  },
+  {
+    "title": "หยุดแก๊งคอลเซ็นเตอร์ก่อกวน-หลอกลวง ด้วย “แอปฯ” ได้ที่นี่",
+    "url": "https://www.tcc.or.th/tcc_media/call-block-application/"
+  },
+  {
+    "title": "ขายของออนไลน์ไม่แจ้งราคาสินค้า ผู้บริโภคมีสิทธิร้องเรียนได้",
+    "url": "https://www.tcc.or.th/tcc_media/price-onlineshopping/"
+  },
+  {
+    "title": "ทำ OT วันแรงงาน ต้องได้เงิน 3 เท่า",
+    "url": "https://www.tcc.or.th/tcc_media/02052565_info-labours-day/"
+  },
+  {
+    "title": "‘วันแรงงาน’ ลูกจ้างต้องได้หยุดงาน และได้เงินด้วยนะ",
+    "url": "https://www.tcc.or.th/tcc_media/01052565_info-labours-day/"
+  },
+  {
+    "title": "ขายทองอย่างไร ไม่ถูกกดราคาหรือโดนโกง",
+    "url": "https://www.tcc.or.th/tcc_media/gold/"
+  },
+  {
+    "title": "พบ ‘เงินโอนเข้าผิดบัญชี’ อย่ารีบโอนกลับ อาจเป็นกับดักมิจฉาชีพ!",
+    "url": "https://www.tcc.or.th/tcc_media/wrong-transfer/"
+  },
+  {
+    "title": "2 ข้อ ที่ผู้ซื้อประกันภัย ‘อาคเนย์’ ต้องรู้",
+    "url": "https://www.tcc.or.th/tcc_media/info-arcane-insurance/"
+  },
+  {
+    "title": "เปิดสถิติ ‘ข้ามถนน’ บน ‘ทางม้าลาย’ ในประเทศไทยปลอดภัยแค่ไหน?",
+    "url": "https://www.tcc.or.th/tcc_media/info-crosswalk/"
+  },
+  {
+    "title": "8 ปีกับอุบัติเหตุบน ‘ทางม้าลาย’ : ปัญหาที่ไม่ถูกแก้ไขอย่างจริงจัง",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%84%e0%b8%99%e0%b9%80%e0%b8%94%e0%b8%b4%e0%b8%99%e0%b9%80%e0%b8%97%e0%b9%89%e0%b8%b2-%e0%b9%83%e0%b8%99%e0%b9%84%e0%b8%97%e0%b8%a2-%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%96/"
+  },
+  {
+    "title": "ผู้บริโภคต้องได้กินเนื้อหมูที่ปลอดสาร ชวนรู้ ‘สารเร่งเนื้อแดง’ อันตรายต่อสุขภาพอย่างไร",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a0%e0%b8%b2%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b9%8c%e0%b8%81%e0%b8%a3%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-2/"
+  },
+  {
+    "title": "สภาองค์กรผู้บริโภคเสนอ วิธีแก้ ‘ปัญหาน้ำมัน’ แพงช่วยประชาชน",
+    "url": "https://www.tcc.or.th/tcc_media/how-to-fix-expensive-oil/"
+  },
+  {
+    "title": "ผู้บริโภค ซื้อของมา ไม่ตรงปก ต้องทำอย่างไร ?",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%b2-%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%95%e0%b8%a3%e0%b8%87%e0%b8%9b%e0%b8%81-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%87-2/"
+  },
+  {
+    "title": "ปัญหาสั่งของ แต่ได้ไม่ตรงปก มาอีกแล้ว",
+    "url": "https://www.tcc.or.th/tcc_media/shopping-online/"
+  },
+  {
+    "title": "เช็กก่อน! จะตัดสินใจเป็นอาสาสมัคร “งานวิจัยฉีดวัคซีน”",
+    "url": "https://www.tcc.or.th/tcc_media/vaccine/"
+  },
+  {
+    "title": "เผลอกดข้อเสนอที่ประกันส่งมา แต่อยากยกเลิก ต้องทำอย่างไร?",
+    "url": "https://www.tcc.or.th/tcc_media/cancle-insurance/"
+  },
+  {
+    "title": "เคลมประกันโควิด ‘เจอจ่ายจบ’ ไม่ได้ ร้องเรียนที่สภาองค์กรของผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b9%80%e0%b8%84%e0%b8%a5%e0%b8%a1%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%99%e0%b9%82%e0%b8%84%e0%b8%a7%e0%b8%94-%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%88%e0%b8%b2%e0%b8%a2%e0%b8%88%e0%b8%9a/"
+  },
+  {
+    "title": "เจอข้อความจากบริษัทประกันภัย อย่าเพิ่งรีบกดตอบรับ",
+    "url": "https://www.tcc.or.th/tcc_media/insurance-covid/"
+  },
+  {
+    "title": "11.11 นี้ เสียหายไปเท่าไหร่กันบ้างกับของไม่ตรงปก",
+    "url": "https://www.tcc.or.th/tcc_media/flash-sale/"
+  },
+  {
+    "title": "สภาผู้บริโภคแนะ 6 ข้อ ซื้อประกันสุขภาพคุ้มค่า ลดความเสี่ยงให้ผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/buy-insurance/"
+  },
+  {
+    "title": "กู้คอนโดไม่ผ่าน โครงการไม่มีสิทธิยึดเงินดาวน์หรือเงินจอง",
+    "url": "https://www.tcc.or.th/tcc_media/loan-condo/"
+  },
+  {
+    "title": "| เรื่องเล่าผู้บริโภค | แชร์ประสบการณ์สั่งของมาแต่ไม่ตรงปก",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b9%80%e0%b8%a3%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%a5%e0%b9%88%e0%b8%b2%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-%e0%b9%81%e0%b8%8a/"
+  },
+  {
+    "title": "สรุปข่าวและประเด็นผู้บริโภคที่น่าสนใจ เดือนตุลาคม",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a3%e0%b8%b8%e0%b8%9b%e0%b8%82%e0%b9%88%e0%b8%b2%e0%b8%a7%e0%b9%81%e0%b8%a5%e0%b8%b0%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%94%e0%b9%87%e0%b8%99%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a/"
+  },
+  {
+    "title": "อยากยกเลิกสัญญาจองโมเดอร์นา โหลดแบบฟอร์มเลย!",
+    "url": "https://www.tcc.or.th/tcc_media/cancle-moderna/"
+  },
+  {
+    "title": "เตือนภัย!! เพจ ‘หลอกขายรถจักรยานไฟฟ้า’",
+    "url": "https://www.tcc.or.th/tcc_media/electric-bike/"
+  },
+  {
+    "title": "ระบบตั๋วร่วมในต่างประเทศ พกบัตรใบเดียว ขึ้นขนส่งมวลชนอะไรได้บ้าง?",
+    "url": "https://www.tcc.or.th/tcc_media/contactless-smart-card/"
+  },
+  {
+    "title": "สภาองค์กรของผู้บริโภค ทำอะไรบ้าง",
+    "url": "https://www.tcc.or.th/tcc_media/%e0%b8%aa%e0%b8%a0%e0%b8%b2%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b9%8c%e0%b8%81%e0%b8%a3%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b9%82%e0%b8%a0%e0%b8%84-%e0%b8%97%e0%b8%b3%e0%b8%ad%e0%b8%b0/"
+  },
+  {
+    "title": "สิทธิผู้บริโภคสากล 8 ประการ เกราะคุ้มกันผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/world-consumer-rights/"
+  },
+  {
+    "title": "รู้จัก หน้ากาก KF94 ป้องกันสุขภาพผู้บริโภคจาก PM2.5 ได้อย่างไร ?",
+    "url": "https://www.tcc.or.th/tcc_media/maskkf94-infographic-3/"
+  },
+  {
+    "title": "การเปิดเผยข้อมูลที่มาของราคารถไฟฟ้าสายสีเขียว เป็นสิ่งจำเป็น",
+    "url": "https://www.tcc.or.th/tcc_media/06072021-quote-bts/"
+  },
+  {
+    "title": "8 หน้าที่หลัก ‘สภาองค์กรของผู้บริโภค’ คุ้มครองและพิทักษ์สิทธิผู้บริโภค",
+    "url": "https://www.tcc.or.th/tcc_media/28062564_info-tcc-duty/"
+  },
+  {
+    "title": "กว่าจะเป็น ‘สภาองค์กรของผู้บริโภค’",
+    "url": "https://www.tcc.or.th/tcc_media/26062654_info-tcc-timeline/"
+  },
+  {
+    "title": "‘ผู้บริโภค’ จะเป็นอย่างไร ถ้าไทยเข้าร่วม CPTPP",
+    "url": "https://www.tcc.or.th/tcc_media/19062564_info_cptpp/"
+  },
+  {
+    "title": "7 มิถุนายน วันความปลอดภัยอาหารโลก",
+    "url": "https://www.tcc.or.th/tcc_media/world-food-safety-day/"
+  },
+  {
+    "title": "ถาม – ตอบ : ข้อเสนอกรณีสัมปทาน BTS",
+    "url": "https://www.tcc.or.th/tcc_media/qa-bts/"
+  },
+  {
+    "title": "คลินิกเสริมความงามจริงหรือหลอก",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=682ecf894cca1fc7e",
+    "hashtags": [
+      "บริการสุขภาพ",
+      "โฆษณาที่ก่อให้เกิดความเข้าใจผิด",
+      "โฆษณาที่สนับสนุนให้ทำผิดกฎหมาย",
+      "ชำรุดบกพร่อง/ได้รับความเสียหาย"
+    ]
+  },
+  {
+    "title": "พบเห็นสายสื่อสารห้อยลงมา ไม่ปลอดภัย ทำอย่างไร?",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=682eb61d65b450084",
+    "hashtags": [
+      "การสื่อสาร โทรคมนาคม และเทคโนโลยีสารสนเทศ",
+      "ชำรุดบกพร่อง/ได้รับความเสียหาย",
+      "ระบบสาธารณูปโภคไม่ได้มาตรฐาน"
+    ]
+  },
+  {
+    "title": "ของก็ไม่ได้ ขนส่งก็แย่ ทำไงดี?",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=67eb5d9714e473442",
+    "hashtags": [
+      "สินค้าและบริการทั่วไป",
+      "พฤติกรรมพนักงานไม่ดี",
+      "ไม่ได้รับสินค้าบริการ/ไม่คืนเงิน"
+    ]
+  },
+  {
+    "title": "ซื้อรถไว้ขับ ไม่ได้ขับ เน้นนอนอู่",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=682c670bb36b2cf14",
+    "hashtags": [
+      "สินค้าและบริการทั่วไป",
+      "ข้อสัญญาไม่เป็นธรรม/ทำให้เสียเปรียบเกินสมควร",
+      "ชำรุดบกพร่อง/ได้รับความเสียหาย"
+    ]
+  },
+  {
+    "title": "เพิ่งซื้อของมาใช้ พังแล้วเหรอ",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=682c67c1565953edf",
+    "hashtags": [
+      "อาหาร ยา และผลิตภัณฑ์สุขภาพ",
+      "บริการสุขภาพ",
+      "สินค้าและบริการทั่วไป",
+      "ชำรุดบกพร่อง/ได้รับความเสียหาย",
+      "ไม่คืนเงิน",
+      "ไม่คืนเงิน/สินค้า"
+    ]
+  },
+  {
+    "title": "โดนทวงหนี้โหด ทำไงดี",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=66cfc08374b9e74e3",
+    "hashtags": [
+      "การเงินและการธนาคาร",
+      "ข้าราชการรับจ้างทวงหนี้",
+      "ทวงถามหนี้กับญาติ หรือคนในครอบครัว",
+      "โทรศัพท์ทวงถามหนี้วันละหลายครั้ง ข่มขู่ทําให้กลัว",
+      "โทรศัพท์มาที่ทํางานทวงหนี้กับเพื่อน / ผู้บริหาร",
+      "โทรศัพท์หาลูกหนี้ ใช้วาจาไม่สุภาพ",
+      "ส่งคนมาทวงหนี้ในที่ทํางาน"
+    ]
+  },
+  {
+    "title": "สั่งของไม่ได้ของ",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=66c82a56d8314cbba",
+    "hashtags": [
+      "สินค้าและบริการทั่วไป",
+      "ไม่ได้รับสินค้าบริการ/ไม่คืนเงิน",
+      "ส่งมอบล่าช้า"
+    ]
+  },
+  {
+    "title": "ได้รับสินค้าไม่ตรงปก",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=66c49ecd92571b46d",
+    "hashtags": [
+      "สินค้าและบริการทั่วไป",
+      "ส่งมอบผิดจากที่สั่ง/ตกลง"
+    ]
+  },
+  {
+    "title": "ได้รับสินค้าผิดจากที่สั่ง",
+    "url": "https://crm.tcc.or.th?entryPoint=attachmentPortal&id=66c4a0905078956a7",
+    "hashtags": [
+      "สินค้าและบริการทั่วไป",
+      "ส่งมอบผิดจากที่สั่ง/ตกลง"
+    ]
+  }
+]
