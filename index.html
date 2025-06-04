@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แชทบอทแนะนำโบรชัวร์</title>
+  <style>
+    #chat-container {
+      height: 400px;
+      width: 100%;
+      border: 1px solid #ccc;
+      overflow-y: auto;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-family: sans-serif;
+    }
+    .user { color: blue; margin: 5px 0; }
+    .bot { color: green; margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h2>💬 แชทบอทแนะนำโบรชัวร์</h2>
+  <div id="chat-container"></div>
+  <input type="text" id="user-input" placeholder="พิมพ์ข้อความที่นี่..." />
+  <button id="send-btn">ส่ง</button>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
