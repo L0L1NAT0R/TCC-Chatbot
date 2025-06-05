@@ -75,6 +75,30 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
         ]
     }
 
+    # Keywords describing consumer protection problems
+    problem_keyword_boosts = {
+        "ประกัน": 3,
+        "ร้องเรียน": 3,
+        "เสียหาย": 3,
+        "หลอก": 3,
+        "โกง": 3,
+        "โฆษณา": 3,
+        "หลอกลวง": 3,
+        "ไม่ตรงปก": 3,
+        "ผิดกฎหมาย": 3,
+        "คืนเงิน": 3,
+        "ขอเงินคืน": 3,
+        "แฮก": 3,
+        "เงินหาย": 3,
+        "ทุจริต": 3,
+        "ไม่ได้รับ": 3,
+        "สัญญา": 3,
+        "ผิดจากที่สั่ง": 3,
+        "ชำรุด": 3,
+        "เคลมประกัน": 3
+    }
+
+
 
     prompt_boost_category = None
     for section, keywords in semantic_triggers.items():
@@ -96,7 +120,10 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
         title_tokens = word_tokenize(title_norm, engine="newmm")
         content_tokens = word_tokenize(content_norm, engine="newmm") if content else []
 
-        if not skip_title_filter and not any(word in title_tokens for word in signal_words):
+        if not skip_title_filter and not (
+            any(word in title_tokens for word in signal_words) or
+            prompt_boost_category == title_norm
+        ):
             continue
 
         score = 0
@@ -152,6 +179,12 @@ def filter_documents(user_msg, docs, max_docs=30, skip_title_filter=False):
 
         score += hashtag_score
 
+                # Boost for problem-related keywords in user message
+        for word in signal_words:
+            boost = problem_keyword_boosts.get(word, 0)
+            if(boost > 0):
+                print(f"💥 Boosted for keyword: {word} (+{boost})")
+                score
 
         if score >= 3 or skip_title_filter:
             scored.append((score, doc))
@@ -198,19 +231,38 @@ def ask():
         docs = brochures + articles
 
     filtered_docs = filter_documents(user_msg, docs, max_docs=3, skip_title_filter=is_about_company)
+    print("📋 Filtered docs (score, title):")
+    for score, doc in filtered_docs:
+        print(f"  - ({score}) {doc.get('title')}")
 
     if not filtered_docs:
         reply = "ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่ค่ะ"
     else:
         if is_about_company:
-            top = filtered_docs[0] if filtered_docs else None
-            if top and top[0] >= 3:
-                score, doc = top
-                title = doc.get("title", "")
+            prompt = (
+                "คุณคือแชทบอทที่ให้คำแนะนำโดยอิงจากรายการด้านล่างเท่านั้น\n"
+                "คุณจะได้รับรายการข้อมูลเกี่ยวกับองค์กร เช่น ประวัติ พันธกิจ วิสัยทัศน์ รายได้ และการติดต่อ\n"
+                "ห้ามแต่งหัวข้อ ห้ามให้ข้อมูลนอกเหนือจากรายการนี้\n"
+                "แสดงหัวข้อพร้อมเนื้อหาอย่างย่อหรือเต็มที่มีในรายการ\n"
+                "หากไม่มีข้อมูลที่เกี่ยวข้อง ให้ตอบว่า: ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่\n\n"
+            )
+
+            for score, doc in filtered_docs[:3]:
+                title = doc.get("title", "ไม่ระบุหัวข้อ")
                 content = doc.get("content", "")
-                reply = f"<strong>{title}</strong><br>{content[:800]}..."
-            else:
-                reply = "ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่ค่ะ"
+                prompt += f"- {title}\n{content.strip()[:500]}...\n\n"
+
+            messages = [
+                {"role": "system", "content": prompt},
+                {"role": "user", "content": user_msg}
+            ]
+
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=messages
+            )
+            reply = response.choices[0].message.content
+
         else:
             reply = ""
             for score, doc in filtered_docs[:3]:
