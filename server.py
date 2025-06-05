@@ -204,6 +204,31 @@ def ask():
     user_msg_clean = normalize(user_msg)  # move this BEFORE tokenization
     user_tokens = [tok for tok in word_tokenize(user_msg_clean, engine="newmm") if tok.strip()]
 
+    # ส่วนใน ask()
+    smalltalk_keywords = [
+        "สวัสดี", "คุณชื่ออะไร", "คุณเป็นใคร", "ทำอะไรได้บ้าง", "สบายดีไหม", "หวัดดี", "ทักทาย", "สบายดีหรือเปล่า", "วันนี้เป็นยังไงบ้าง", "เป็นไงบ้าง", "เจอกันอีกแล้วนะ", "ไม่ได้เจอกันนานเลย", "ยินดีที่ได้รู้จัก", "คุณสบายดีไหม", "วันนี้คุณโอเคไหม",
+        "อารมณ์ดีไหม", "คุณเหนื่อยไหม", "ทำอะไรอยู่", "วันนี้ยุ่งไหม", "ได้พักผ่อนไหม", "กินข้าวหรือยัง"
+    ]
+
+    if any(kw in user_msg_clean for kw in smalltalk_keywords):
+        messages = [
+            {"role": "system", "content": (
+                "คุณคือแชทบอทสุภาพ ให้บริการข้อมูลอย่างเป็นมิตร\n"
+                "ถ้าผู้ใช้ทักทาย หรือถามเกี่ยวกับตัวคุณ เช่น ชื่อ คุณทำอะไรได้ ให้ตอบอย่างสุภาพ เป็นกันเอง และให้เข้าใจง่าย\n"
+                "ห้ามตอบเรื่องอื่นที่ไม่เกี่ยวกับบทสนทนาเบื้องต้น\n"
+            )},
+            {"role": "user", "content": user_msg}
+        ]
+
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=messages
+        )
+        reply = response.choices[0].message.content
+        return jsonify({"reply": reply})
+
+        
+    #NORMAL RESPONSES
     about_keywords = [
         "สภาผู้บริโภค", "tcc", "องค์กร", "บริษัท", "เกี่ยวกับบริษัท", "หน้าที่", "ประวัติ", "ก่อตั้ง",
         "กฎหมาย", "ติดต่อ", "เบอร์", "อีเมล", "สำนักงาน", "เลขาธิการ", "สำนักงานใหญ่"
