@@ -1,7 +1,7 @@
 import json
 import requests
 
-API_KEY = "AIzaSyDT_jDTNaAXFC-v9SCD9ZiE-WzTV5XBhS4"
+API_KEY = "AIzaSyDT_jDTNaAXFC-v9SCD9ZiE-WzTV5XBhS4" #must make a new one for the company
 CHANNEL_ID = "UCxU2cUr78h5bb8xfq60_T1A"  # This is @tccthailand
 
 def get_uploads_playlist_id():

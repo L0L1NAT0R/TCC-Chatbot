@@ -29,6 +29,13 @@ with open("about.json", encoding="utf-8") as f3:
     abouts = json.load(f3)
     for ab in abouts:
         ab["source"] = "about"
+
+# Embed 'abouts' live and ensure embeddings are list-type (not np.array)
+for doc in abouts:
+    content = doc.get("title", "") + " " + doc.get("content", "")
+    emb = get_embedding(content[:1000])
+    doc["embedding"] = emb.tolist() if hasattr(emb, "tolist") else emb
+
 with open("videos.json", encoding = "utf-8") as f4:
     videos = json.load(f4)
     for v in videos:
@@ -39,16 +46,12 @@ all_docs = brochures + articles + videos
 
 
 # Embed all documents into vectors used to compare similarity
-print("🔄 Embedding all documents...")
-for doc in all_docs:
-    content = doc.get("title", "") + " " + doc.get("content", "") + " " + doc.get("description", "")
-    doc["embedding"] = get_embedding(content[:1000])  # limit to 1000 chars
+# Load precomputed embeddings
+print("📥 Loading embedded documents...")
+with open("embedded_docs.json", encoding="utf-8") as f:
+    all_docs = json.load(f)
+print(f"✅ Loaded {len(all_docs)} embedded documents")
 
-for doc in abouts:
-    content = doc.get("title", "") + " " + doc.get("content", "")
-    doc["embedding"] = get_embedding(content[:1000])
-
-print("✅ Embeddings ready.")
 #basically removes common punctuations in the string to purely evaluate word meaning
 def normalize(text):
     text = text.lower().strip()
