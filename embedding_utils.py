@@ -3,8 +3,13 @@ import numpy as np
 from openai import OpenAI
 import os
 import json
+from dotenv import load_dotenv, find_dotenv
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# ✅ Load environment variables BEFORE using them
+load_dotenv(find_dotenv())
+
+# ✅ Safely get API key (strip quotes if needed)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY").strip('"'))
 
 def get_embedding(text, model="text-embedding-3-small"):
     result = client.embeddings.create(
