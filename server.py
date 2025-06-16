@@ -1,20 +1,21 @@
-from flask import Flask, request, jsonify #use flask web server
-from flask_cors import CORS #allow frontend the input to talk with the server so the server can give output
-from openai import OpenAI #use gpt 3.5 to answer question
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from openai import OpenAI
 import os
 import json
 import re
-from dotenv import load_dotenv #load API key in GPT
+from dotenv import load_dotenv
 from embedding_utils import get_embedding, cosine_similarity
-import numpy as np #for cosine similarity work with vectors
+import numpy as np
 
 load_dotenv()
 app = Flask(__name__)
+app.secret_key = 'your-super-secret-key'  # needed for session tracking
 CORS(app)
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Load data from all json files that were compiled using the scrape scripts 
+# Load main content data
 with open("brochures.json", encoding="utf-8") as f1:
     brochures = json.load(f1)
     for b in brochures:
@@ -30,42 +31,43 @@ with open("about.json", encoding="utf-8") as f3:
     for ab in abouts:
         ab["source"] = "about"
 
-# Embed 'abouts' live and ensure embeddings are list-type (not np.array)
+# Embed 'abouts' live
 for doc in abouts:
     content = doc.get("title", "") + " " + doc.get("content", "")
     emb = get_embedding(content[:1000])
     doc["embedding"] = emb.tolist() if hasattr(emb, "tolist") else emb
 
-with open("videos.json", encoding = "utf-8") as f4:
+with open("videos.json", encoding="utf-8") as f4:
     videos = json.load(f4)
     for v in videos:
         v["source"] = "video"
 
 all_docs = brochures + articles + videos
 
-
-
-# Embed all documents into vectors used to compare similarity
 # Load precomputed embeddings
 print("📥 Loading embedded documents...")
 with open("embedded_docs.json", encoding="utf-8") as f:
     all_docs = json.load(f)
 print(f"✅ Loaded {len(all_docs)} embedded documents")
 
-#basically removes common punctuations in the string to purely evaluate word meaning
+# Load complaint types and instructions
+with open("complaints.json", encoding="utf-8") as f5:
+    complaint_guide = json.load(f5)
+
 def normalize(text):
     text = text.lower().strip()
     text = re.sub(r"[“”\"\'‘’.,!?()\-\–—:;]", "", text)
     text = re.sub(r"\s+", " ", text)
     return text
-#use gpt 4o to perform classification and return a binary choice of reteurn link or user based on the links
+
 def classify_user_intent(user_input):
     messages = [
         {"role": "system", "content": (
             "คุณคือแชทบอทที่ช่วยแยกความตั้งใจของผู้ใช้:\n"
             "- หากต้องการข้อมูลเกี่ยวกับองค์กร ให้ตอบ: องค์กร\n"
             "- หากต้องการคำแนะนำ บทความ หรือข่าว ให้ตอบ: ลิงก์\n"
-            "ตอบเฉพาะคำว่า 'องค์กร' หรือ 'ลิงก์' เท่านั้น"
+            "- หากต้องการร้องเรียนปัญหา ให้ตอบ: ร้องเรียน\n"
+            "ตอบเฉพาะคำว่า 'องค์กร', 'ลิงก์' หรือ 'ร้องเรียน' เท่านั้น"
         )},
         {"role": "user", "content": user_input}
     ]
@@ -75,14 +77,41 @@ def classify_user_intent(user_input):
     )
     return response.choices[0].message.content.strip()
 
+def detect_complaint_type(user_msg):
+    # Build the list of valid complaint categories
+    choices = []
+    for category, subtypes in complaint_guide.items():
+        for subtype in subtypes:
+            choices.append(f"{category} > {subtype}")
 
-#this function looks at cosine similarity of embedding and picks the top 30 most similar in meaning and etc.
+    choice_list = "\n".join([f"- {c}" for c in choices])
+
+    system = (
+        "คุณคือผู้ช่วยจัดหมวดหมู่เรื่องร้องเรียนตามรายการที่มีอยู่ด้านล่าง "
+        "จากข้อความของผู้ใช้ ให้เลือกหมวดหมู่ที่ตรงที่สุดจากรายการนี้เท่านั้น "
+         "และตอบกลับเฉพาะชื่อหมวดหมู่ในรูปแบบ: ชื่อหมวดหลัก > ชื่อปัญหา\n\n"
+        f"{choice_list}"
+    )
+
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": user_msg}
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=messages
+    )
+
+    return response.choices[0].message.content.strip()
+
+
 def get_top_documents_by_similarity(user_input, docs, top_k=30):
     user_embedding = get_embedding(user_input)
     scored = [(cosine_similarity(user_embedding, np.array(doc["embedding"])), doc) for doc in docs]
     scored.sort(reverse=True, key=lambda x: x[0])
     return [doc for _, doc in scored[:top_k]]
-#have the model rerank the top 30 and select the top 3 most relevant
+
 def gpt_rerank_documents(user_input, docs):
     doc_list_text = ""
     for i, doc in enumerate(docs):
@@ -114,14 +143,22 @@ def gpt_rerank_documents(user_input, docs):
     indexes = [int(i) - 1 for i in re.findall(r"\d+", answer)]
     return [docs[i] for i in indexes if 0 <= i < len(docs)]
 
-
 @app.route("/ask", methods=["POST"])
 def ask():
     user_msg = request.json["message"]
     intent = classify_user_intent(user_msg)
     print("📌 Intent:", intent)
-#perform this if asked about the company
-    if intent == "องค์กร":
+
+    # Check if we're already inside an active complaint session
+    if session.get("complaint_form") and get_next_field(session["complaint_form"]):
+        return complaint_flow()
+
+# If user just started a complaint
+    if intent == "ร้องเรียน":
+        return complaint_flow()
+
+
+    elif intent == "องค์กร":
         docs = get_top_documents_by_similarity(user_msg, abouts, top_k=10)
         top_docs = gpt_rerank_documents(user_msg, docs)
         prompt = "คุณคือแชทบอทที่ให้คำอธิบายเกี่ยวกับองค์กร จากข้อมูลด้านล่างเท่านั้น\n\n"
@@ -130,44 +167,117 @@ def ask():
         messages = [{"role": "system", "content": prompt}, {"role": "user", "content": user_msg}]
         response = client.chat.completions.create(model="gpt-4o", messages=messages)
         reply = response.choices[0].message.content
+        return jsonify({"reply": reply})
+
     else:
         docs = get_top_documents_by_similarity(user_msg, all_docs, top_k=30)
         top_docs = gpt_rerank_documents(user_msg, docs)
         if not top_docs:
-            reply = "ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่ค่ะ"
+            return jsonify({"reply": "ไม่พบข้อมูลที่เกี่ยวข้อง กรุณาลองใหม่ค่ะ"})
+
+        reply = ""
+        for doc in top_docs:
+            title = doc.get("title", "ไม่ระบุหัวข้อ")
+            url = doc.get("url", "#")
+            source = doc.get("source", "")
+            if source == "brochure":
+                label = "📊 อินโฟกราฟิกจากเว็บไซต์"
+            elif source == "article":
+                label = "📰 ข่าว/บทความจากเว็บไซต์"
+            elif source == "video":
+                label = "🎥 วิดีโอจาก YouTube ช่อง TCC"
+                video_id = url.split("v=")[-1] if "v=" in url else ""
+                thumbnail = f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg"
+                reply += f'{label}<br><a href="{url}" target="_blank"><img src="{thumbnail}" alt="{title}" style="width:100%;max-width:320px;border-radius:10px;margin-bottom:4px;"><br>{title}</a><br><br>'
+                continue
+            else:
+                label = "📁 แหล่งข้อมูลอื่น"
+
+            reply += f'{label}<br>- <a href="{url}" target="_blank">{title}</a><br><br>'
+
+        return jsonify({"reply": reply})
+    
+# 🔄 Multi-step complaint assistant form (structured response)
+from flask import session
+
+form_fields = [
+    "ชื่อบริษัท / บุคคล",
+    "วันที่เกิดเหตุ",
+    "จังหวัดที่เกิดเหตุ",
+    "รายละเอียด",
+    "มูลค่าความเสียหาย",
+    "แนบไฟล์"
+]
+
+def get_next_field(form_data):
+    for field in form_fields:
+        if form_data.get(field) is None:
+            return field
+    return None
+
+@app.route("/complaint", methods=["POST"])
+def complaint_flow():
+    user_msg = request.json["message"]
+
+    if "complaint_form" not in session:
+        session["complaint_form"] = {
+            "หมวดหมู่ร้องเรียน": None,
+            "ประเภทย่อย": None,
+            "ชื่อบริษัท / บุคคล": None,
+            "วันที่เกิดเหตุ": None,
+            "จังหวัดที่เกิดเหตุ": None,
+            "รายละเอียด": None,
+            "มูลค่าความเสียหาย": None,
+            "แนบไฟล์": []
+        }
+
+    form = session["complaint_form"]
+
+    # STEP 0: Classification
+    if form["หมวดหมู่ร้องเรียน"] is None:
+        match = detect_complaint_type(user_msg)
+        print("📌 GPT match:", match)
+        try:
+            category, subtype = [m.strip() for m in match.split(">")]
+            info = complaint_guide.get(category, {}).get(subtype, {})
+            if info:
+                form["หมวดหมู่ร้องเรียน"] = category
+                form["ประเภทย่อย"] = subtype
+                session["complaint_form"] = form
+
+                doc_list = info.get("required_documents", [])
+                guidance = info.get("guidance", [])
+                doc_text = "\n".join(["- " + d for d in doc_list])
+                guide_text = "\n".join(["- " + g for g in guidance])
+
+                return jsonify({
+                    "reply": f"📂 หมวดหมู่ร้องเรียนที่แนะนำ: {category} > {subtype}\n\n"
+                    f"📌 เอกสารที่ควรแนบ:\n{doc_text}\n\n"
+                    f"✍️ โปรดระบุ: {form_fields[0]}"
+                })
+            else:
+                return jsonify({"reply": "ไม่พบหมวดหมู่ร้องเรียน กรุณาระบุให้ชัดเจนขึ้นค่ะ"})
+        except:
+            return jsonify({"reply": "ไม่สามารถแยกหมวดหมู่ได้ กรุณาอธิบายเพิ่มเติมค่ะ"})
+
+    # STEP 1+: Collect fields
+    next_field = get_next_field(form)
+    if next_field:
+        form[next_field] = user_msg.strip()
+        session["complaint_form"] = form
+        next_prompt = get_next_field(form)
+        if next_prompt:
+            return jsonify({"reply": f"✍️ โปรดระบุ: {next_prompt}"})
         else:
-            reply = ""
-            for doc in top_docs:
-                title = doc.get("title", "ไม่ระบุหัวข้อ")
-                url = doc.get("url", "#")
-                source = doc.get("source", "")
+            # All complete
+            summary = "\n".join([f"- {k}: {v}" for k, v in form.items() if v])
+            return jsonify({
+                "reply": f"✅ คุณกรอกข้อมูลครบถ้วนแล้ว:\n\n{summary}\n\n"
+                         f"หากต้องการแก้ไข พิมพ์ชื่อหัวข้อ เช่น 'แก้ไข จังหวัดที่เกิดเหตุ'"
+            })
+    else:
+        return jsonify({"reply": "คุณได้กรอกข้อมูลครบถ้วนแล้ว หากต้องการแก้ไขกรุณาระบุหัวข้อที่ต้องการแก้ไขค่ะ"})
 
-                if source == "brochure":
-                    label = "📊 อินโฟกราฟิกจากเว็บไซต์"
-                    reply += f'{label}<br>- <a href="{url}" target="_blank">{title}</a><br><br>'
-
-                elif source == "article":
-                    label = "📰 ข่าว/บทความจากเว็บไซต์"
-                    reply += f'{label}<br>- <a href="{url}" target="_blank">{title}</a><br><br>'
-
-                elif source == "video":
-                    label = "🎥 วิดีโอจาก YouTube ช่อง TCC"
-                    video_id = url.split("v=")[-1] if "v=" in url else ""
-                    thumbnail_url = f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg"
-                    reply += (
-                        f'{label}<br>'
-                        f'<a href="{url}" target="_blank">'
-                        f'<img src="{thumbnail_url}" alt="{title}" style="width:100%;max-width:320px;border-radius:10px;margin-bottom:4px;"><br>'
-                        f'{title}</a><br><br>'
-                    )
-
-                else:
-                    label = "📁 แหล่งข้อมูลอื่น"
-                    reply += f'{label}<br>- <a href="{url}" target="_blank">{title}</a><br><br>'
-
-
-
-    return jsonify({"reply": reply})
-
+#neeeded for the application to run properly
 if __name__ == "__main__":
     app.run(debug=True)
