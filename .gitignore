@@ -1,0 +1,4 @@
+# Ignore large embedding output files
+embedded_docs.json
+embeddings_cache.json
+.env
