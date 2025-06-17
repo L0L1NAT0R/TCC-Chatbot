@@ -71,10 +71,11 @@ document.getElementById("send-btn").addEventListener("click", async () => {
   document.getElementById("chat-messages").scrollTop = document.getElementById("chat-messages").scrollHeight;
 
   try {
-    const res = await fetch("http://localhost:5000/ask", {
+    const res = await fetch("http://localhost:8000/ask", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input }),
+      credentials: 'include'  // <-- Add this line
     });
 
     const data = await res.json();
