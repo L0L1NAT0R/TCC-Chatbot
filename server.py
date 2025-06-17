@@ -77,12 +77,14 @@ all_docs = brochures + articles + videos
 
 # Load precomputed embeddings
 # Load compressed precomputed embeddings
+# Load compressed precomputed embeddings
 print("📥 Loading compressed embedded documents...")
 embedding_data = np.load("embeddings_data.npz", allow_pickle=True)
 embeddings = embedding_data["embeddings"]
-texts = embedding_data["texts"]
-sources = embedding_data["sources"]
+texts = embedding_data["texts"].tolist()
+sources = embedding_data["sources"].tolist()
 print(f"✅ Loaded {len(texts)} embedded documents using {embeddings.nbytes / (1024 * 1024):.2f} MB")
+
 
 
 # Load complaint types and instructions
