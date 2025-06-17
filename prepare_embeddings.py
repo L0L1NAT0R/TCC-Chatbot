@@ -29,7 +29,9 @@ sources = []
 
 print("🔄 Generating embeddings...")
 for doc in tqdm(all_docs):
-    text = doc["text"]
+    text = doc.get("text") or doc.get("content") or doc.get("description") or ""
+    if not text.strip():
+        continue
     embedding = get_embedding(text)
     embeddings.append(embedding)
     texts.append(text)
