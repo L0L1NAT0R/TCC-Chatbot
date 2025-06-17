@@ -76,10 +76,14 @@ with open("videos.json", encoding="utf-8") as f4:
 all_docs = brochures + articles + videos
 
 # Load precomputed embeddings
-print("📥 Loading embedded documents...")
-with open("embedded_docs.json", encoding="utf-8") as f:
-    all_docs = json.load(f)
-print(f"✅ Loaded {len(all_docs)} embedded documents")
+# Load compressed precomputed embeddings
+print("📥 Loading compressed embedded documents...")
+embedding_data = np.load("embeddings_data.npz", allow_pickle=True)
+embeddings = embedding_data["embeddings"]
+texts = embedding_data["texts"]
+sources = embedding_data["sources"]
+print(f"✅ Loaded {len(texts)} embedded documents using {embeddings.nbytes / (1024 * 1024):.2f} MB")
+
 
 # Load complaint types and instructions
 with open("complaints.json", encoding="utf-8") as f5:
@@ -137,11 +141,21 @@ def detect_complaint_type(user_msg):
     return response.choices[0].message.content.strip()
 
 
-def get_top_documents_by_similarity(user_input, docs, top_k=30):
+def get_top_documents_by_similarity(user_input, docs=None, top_k=30):
     user_embedding = get_embedding(user_input)
-    scored = [(cosine_similarity(user_embedding, np.array(doc["embedding"])), doc) for doc in docs]
-    scored.sort(reverse=True, key=lambda x: x[0])
-    return [doc for _, doc in scored[:top_k]]
+    sims = [cosine_similarity(user_embedding, vec) for vec in embeddings]
+    top_indices = np.argsort(sims)[-top_k:][::-1]
+    
+    top_docs = []
+    for i in top_indices:
+        top_docs.append({
+            "title": texts[i][:60] + "..." if len(texts[i]) > 60 else texts[i],
+            "content": texts[i],
+            "url": "#",  # You can modify this if you saved actual URLs
+            "source": sources[i]
+        })
+    return top_docs
+
 
 def gpt_rerank_documents(user_input, docs):
     doc_list_text = ""
@@ -336,4 +350,5 @@ def complaint_flow():
 
 #neeeded for the application to run properly
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
