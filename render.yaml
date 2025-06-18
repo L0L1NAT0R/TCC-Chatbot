@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tcc-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app --timeout 120
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+    plan: free

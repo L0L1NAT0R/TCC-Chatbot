@@ -18,10 +18,10 @@ function appendMessage(sender, message, cssClass) {
 document.body.insertAdjacentHTML("beforeend", `
   <img id="mascot-collapsed" src="mascot-closed.png" alt="Mascot">
   <div id="chat-fab">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-    <path d="M4 4h16v12H5.17L4 17.17V4zM2 2v20l4-4h14a2 2 0 0 0 2-2V2H2z"/>
-  </svg>
-</div>
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M4 4h16v12H5.17L4 17.17V4zM2 2v20l4-4h14a2 2 0 0 0 2-2V2H2z"/>
+    </svg>
+  </div>
   <img id="mascot-expanded" src="mascot-open.png" alt="Mascot">
   <div id="chat-box">
     <div id="chat-messages"></div>
@@ -54,6 +54,12 @@ window.addEventListener("DOMContentLoaded", () => {
   setChatOpen(isOpen);
 });
 
+// 🌐 Smart BASE_URL detection
+const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+const BASE_URL = isLocal
+  ? "http://localhost:5000"
+  : "https://tcc-chatbot.onrender.com";
+
 document.getElementById("send-btn").addEventListener("click", async () => {
   const userInput = document.getElementById("user-input");
   const input = userInput.value.trim();
@@ -71,11 +77,10 @@ document.getElementById("send-btn").addEventListener("click", async () => {
   document.getElementById("chat-messages").scrollTop = document.getElementById("chat-messages").scrollHeight;
 
   try {
-    const res = await fetch("http://localhost:8000/ask", {
+    const res = await fetch(`${BASE_URL}/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input }),
-      credentials: 'include'  // <-- Add this line
     });
 
     const data = await res.json();
@@ -85,6 +90,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
 
     appendMessage("บอท", data.reply, "bot");
   } catch (err) {
+    console.error("❌ Fetch failed:", err);
     const typingEl = document.getElementById("bot-typing");
     if (typingEl) typingEl.remove();
 

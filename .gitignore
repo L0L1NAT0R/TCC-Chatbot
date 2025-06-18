@@ -1,4 +1,9 @@
 # Ignore large embedding output files
-embedded_docs.json
-embeddings_cache.json
 .env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+embeddings_cache.json
+embedded_docs.json
+venv/
