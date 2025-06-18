@@ -7,6 +7,7 @@ import re
 from dotenv import load_dotenv
 import numpy as np
 import faiss
+from flask import send_from_directory
 
 load_dotenv()
 app = Flask(__name__)
@@ -255,6 +256,17 @@ def complaint_flow():
             })
     else:
         return jsonify({"reply": "คุณได้กรอกข้อมูลครบถ้วนแล้ว หากต้องการแก้ไขกรุณาระบุหัวข้อที่ต้องการแก้ไขค่ะ"})
+
+@app.route("/")
+def serve_index():
+    return send_from_directory(".", "index.html")
+
+@app.route("/<path:filename>")
+def serve_static(filename):
+    if os.path.exists(filename):
+        return send_from_directory(".", filename)
+    return "File not found", 404
+
 
 if __name__ == "__main__":
     app.run(debug=True)
