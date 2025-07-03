@@ -2,9 +2,14 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TCC-Chatbot</title>
   <link rel="stylesheet" href="chatbot.css">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Prompt', sans-serif;
@@ -19,11 +24,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      text-align: center;
+      flex: 1 1 100%;
     }
 
     nav a {
@@ -39,11 +47,12 @@
 
     main {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem;
     }
 
     main img {
-      max-width: 320px;
+      max-width: 100%;
+      height: auto;
       margin-bottom: 1rem;
     }
 
@@ -67,6 +76,24 @@
       text-align: center;
       font-size: 0.9rem;
       color: #888;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        display: block;
+      }
+
+      a.button {
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">

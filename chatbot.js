@@ -14,7 +14,7 @@ function appendMessage(sender, message, cssClass) {
   document.getElementById("chat-messages").scrollTop = document.getElementById("chat-messages").scrollHeight;
 }
 
-// Inject HTML
+// Inject HTML with the image on top being the two toggle images
 document.body.insertAdjacentHTML("beforeend", `
   <img id="mascot-collapsed" src="mascot-closed.png" alt="Mascot">
   <div id="chat-fab">

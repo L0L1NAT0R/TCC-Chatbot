@@ -106,3 +106,30 @@
   color: #388e3c;
   margin: 6px 0;
 }
+@media (max-width: 480px) {
+  #chat-box {
+    width: 90vw;
+    height: 80vh;
+    right: 5vw;
+    bottom: 100px;
+  }
+
+  #chat-fab {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #mascot-collapsed {
+    width: 50px;
+    right: 20px;
+  }
+
+  #mascot-expanded {
+    width: 80px;
+    bottom: calc(80vh + 100px);
+    right: 20px;
+  }
+}
