@@ -32,7 +32,10 @@ videos = load_json("videos.json")
 for v in videos:
     v["source"] = "video"
 
-all_docs = brochures + articles + videos
+infographics = load_json("infographics.json")
+for i in infographics:
+    i["source"] = "infographics"
+all_docs = brochures + articles + videos + infographics
 print(f"📄 Loaded {len(all_docs)} documents")
 
 # Load previous cache (optional but not used for fail-fast)

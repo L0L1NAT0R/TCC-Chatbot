@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, session
+from flask import Flask, request, jsonify, session, send_from_directory
 from flask_cors import CORS
 from openai import OpenAI
 import os
@@ -7,7 +7,6 @@ import re
 from dotenv import load_dotenv
 import numpy as np
 import faiss
-from flask import send_from_directory
 
 load_dotenv()
 app = Flask(__name__)
@@ -16,11 +15,29 @@ CORS(app)
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Load and merge all public resources: articles, infographics, videos
+with open("articles.json", encoding="utf-8") as f:
+    articles = json.load(f)
+    for a in articles:
+        a["source"] = "article"
+
+with open("infographics.json", encoding="utf-8") as f:
+    brochures = json.load(f)
+    for b in brochures:
+        b["source"] = "brochure"
+
+with open("videos.json", encoding="utf-8") as f:
+    videos = json.load(f)
+    for v in videos:
+        v["source"] = "video"
+
+links = articles + brochures + videos
+
 # Load complaint guide
 with open("complaints.json", encoding="utf-8") as f:
     complaint_guide = json.load(f)
 
-# Load FAISS index and metadata
+# Load FAISS index and metadata for reranking
 print("📅 Loading FAISS index and metadata...")
 faiss_index = faiss.read_index("index.faiss")
 with open("doc_metadata.json", encoding="utf-8") as f:
@@ -33,12 +50,12 @@ with open("about.json", encoding="utf-8") as f:
     for ab in abouts:
         ab["source"] = "about"
 
-# Embed 'abouts' live
 from embedding_utils import get_embedding, cosine_similarity
 for doc in abouts:
     content = doc.get("title", "") + " " + doc.get("content", "")
     emb = get_embedding(content[:1000])
     doc["embedding"] = emb.tolist() if hasattr(emb, "tolist") else emb
+
 
 
 def normalize(text):
@@ -50,10 +67,10 @@ def normalize(text):
 def classify_user_intent(user_input):
     messages = [
         {"role": "system", "content": (
-            "คุณคือแชทบอทที่ช่วยแยกความตั้งใจของผู้ใช้:\n"
-            "- หากต้องการข้อมูลเกี่ยวกับองค์กร เช่น วิสัยทัศน์, ภารกิจ, วิธีการทำงาน, การติดต่อองค์กร, เบอร์โทรศัพท์, อีเมล หรือแม้แต่การสอบถามช่องทางร้องเรียน ให้ตอบ: องค์กร\n"
-            "- หากต้องการคำแนะนำ บทความ หรือข่าว ให้ตอบ: ลิงก์\n"
-            "ตอบเฉพาะคำว่า 'องค์กร' หรือ 'ลิงก์' เท่านั้น"
+            "คุณคือแชทบอทที่ช่วยแยกประเภทความตั้งใจของผู้ใช้ จากข้อความด้านล่าง\n\n"
+            "- หากผู้ใช้ถามเกี่ยวกับองค์กร เช่น โครงสร้าง วิสัยทัศน์ วิธีทำงาน การติดต่อ เบอร์โทร อีเมล หรือร้องเรียน ให้ตอบว่า: องค์กร\n"
+            "- ในกรณีอื่น ๆ เช่น ต้องการคำแนะนำ แนวทางแก้ปัญหา ข่าว ความรู้ บทความ หรืออินโฟกราฟิก ให้ตอบว่า: ลิงก์\n"
+            "ตอบกลับด้วยคำว่า: องค์กร หรือ ลิงก์ เท่านั้น"
         )},
         {"role": "user", "content": user_input}
     ]
@@ -63,6 +80,30 @@ def classify_user_intent(user_input):
     )
     return response.choices[0].message.content.strip()
 
+
+def select_relevant_infographics(user_msg, infographics):
+    titles_text = "\n".join([f"{i+1}. {item['title']}" for i, item in enumerate(infographics)])
+
+    system_prompt = (
+        "คุณคือแชทบอทที่ช่วยเลือกอินโฟกราฟิกที่เกี่ยวข้องกับข้อความของผู้ใช้ "
+        "จากรายการด้านล่างนี้:\n\n"
+        f"{titles_text}\n\n"
+        "จากรายการข้างต้น ให้เลือกอินโฟกราฟิกที่เกี่ยวข้องกับคำถามหรือปัญหาของผู้ใช้ "
+        "โดยตอบกลับเป็นหมายเลขคั่นด้วยคอมมา เช่น 1, 3, 6 (อย่าอธิบายเพิ่ม)"
+    )
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_msg}
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=messages
+    )
+
+    selected_indexes = [int(i.strip()) - 1 for i in re.findall(r"\d+", response.choices[0].message.content)]
+    return [infographics[i] for i in selected_indexes if 0 <= i < len(infographics)]
 
 def detect_complaint_type(user_msg):
     choices = []
@@ -133,12 +174,24 @@ def ask():
     intent = classify_user_intent(user_msg)
     print("📌 Intent:", intent)
 
-
-    if session.get("complaint_form") and get_next_field(session["complaint_form"]):
-        return complaint_flow()
-
     if intent == "ร้องเรียน":
-        return complaint_flow()
+        relevant = select_relevant_infographics(user_msg, infographics)
+
+        if not relevant:
+            reply = "ไม่พบอินโฟกราฟิกที่เกี่ยวข้องโดยตรงกับปัญหานี้ค่ะ "
+        else:
+            reply = "📊 อินโฟกราฟิกที่อาจเกี่ยวข้องกับปัญหาของคุณ:\n\n"
+            for item in relevant:
+                reply += f"- <a href='{item['link']}' target='_blank'>{item['title']}</a>\n"
+
+
+        reply += (
+            "\nหากข้อมูลเหล่านี้ยังไม่เพียงพอ คุณสามารถโทรสายด่วนผู้บริโภคที่เบอร์ "
+            "<strong>1502</strong> ในวันและเวลาทำการ หรือร้องเรียนผ่านระบบออนไลน์ที่ "
+            "<a href='https://complaint.tcc.or.th/complaint' target='_blank'>complaint.tcc.or.th</a>"
+        )
+        return jsonify({"reply": reply})
+
 
     elif intent == "องค์กร":
     # Use GPT to detect if the user wants to contact or complain
@@ -202,7 +255,7 @@ def ask():
         reply = ""
         for doc in top_docs:
             title = doc.get("title", "ไม่ระบุหัวข้อ")
-            url = doc.get("url", "#")
+            url = doc.get("url") or doc.get("link", "#")
             source = doc.get("source", "")
             if source == "brochure":
                 label = "📊 อินโฟกราฟิกจากเว็บไซต์"
