@@ -7,3 +7,5 @@ __pycache__/
 embeddings_cache.json
 embedded_docs.json
 venv/
+credentials.json
+service-account.json
