@@ -1,6 +1,26 @@
 [
   {
     "category": "news",
+    "title": "เสริมทักษะ AI ยกระดับ การคุ้มครองผู้บริโภค",
+    "url": "https://www.tcc.or.th/05072568_ai-seminar_prnews/"
+  },
+  {
+    "category": "news",
+    "title": "ชง กมธ. วุฒิสภา หนุนเคลื่อนงานคุ้มครองผู้บริโภค",
+    "url": "https://www.tcc.or.th/consumer-protection-move/"
+  },
+  {
+    "category": "news",
+    "title": "“เที่ยวไทยคนละครึ่ง” อย่างไร ไม่ตกหลุมมิจฉาชีพ",
+    "url": "https://www.tcc.or.th/travel-thailand/"
+  },
+  {
+    "category": "news",
+    "title": "สินค้าเถื่อนทะลักชายแดน หวั่นกระทบผู้บริโภค",
+    "url": "https://www.tcc.or.th/contraband/"
+  },
+  {
+    "category": "news",
     "title": "เตือน “พาวเวอร์แบงก์” ภัยใกล้ตัว หนุน กม.เลมอน ลอว์ ป้องสิทธิผู้บริโภค",
     "url": "https://www.tcc.or.th/powerbank-recall-rights/"
   },
@@ -1276,7 +1296,22 @@
   },
   {
     "category": "banking",
-    "title": "จากผู้เสียหายสู่ข้อเสนอเชิงระบบ ทวงความยุติธรรมจากภัยไซเบอร์",
+    "title": "เคาะฟ้อง 6 คดีผู้บริโภค กรณีผิดสัญญาห้องชุด บ้านจัดสรร รถไฟฟ้า ถูกดูดเงิน",
+    "url": "https://www.tcc.or.th/05072568_consumer-cases-sue_news/"
+  },
+  {
+    "category": "banking",
+    "title": "ธนาคารไร้สาขา (Virtual Bank) กำลังมา ผู้บริโภคพร้อมหรือยัง",
+    "url": "https://www.tcc.or.th/virtual-bank-consumer/"
+  },
+  {
+    "category": "banking",
+    "title": "คอลเซนเตอร์ลวงโลก เมื่อการปกป้องผู้บริโภคยังไม่ทันเกมมิจฉาชีพ",
+    "url": "https://www.tcc.or.th/scam-vs-consumers/"
+  },
+  {
+    "category": "banking",
+    "title": "จากผู้เสียหายสู่ข้อเสนอเชิงระบบ ทวงความยุติธรรมจากภัยออนไลน์",
     "url": "https://www.tcc.or.th/cyber-scam-responsibility/"
   },
   {
@@ -1773,6 +1808,16 @@
     "category": "banking",
     "title": "องค์กรผู้บริโภคทั่วประเทศ ยื่นหนังสือถึงรัฐบาล ชะลอเข้าร่วม ‘CPTPP’  หวั่นส่งผลกระทบโดยตรงต่อประชาชน",
     "url": "https://www.tcc.or.th/consumer-30-province/"
+  },
+  {
+    "category": "transport",
+    "title": "เจาะงบ กระตุ้นเศรษฐกิจ 1.5 แสนล้าน สภาผู้บริโภคขอระบบขนส่งฯ ที่เป็นธรรม",
+    "url": "https://www.tcc.or.th/01072568_economic-stimulus_article/"
+  },
+  {
+    "category": "transport",
+    "title": "หวั่นจุดเปลี่ยนการเมืองทำ รถไฟฟ้า 20 บาท สะดุด แนะเร่งตั้งกองทุนอุดหนุน",
+    "url": "https://www.tcc.or.th/24062568_metro20_news/"
   },
   {
     "category": "transport",
@@ -2501,6 +2546,16 @@
   },
   {
     "category": "real-estate",
+    "title": "เคาะฟ้อง 6 คดีผู้บริโภค กรณีผิดสัญญาห้องชุด บ้านจัดสรร รถไฟฟ้า ถูกดูดเงิน",
+    "url": "https://www.tcc.or.th/05072568_consumer-cases-sue_news/"
+  },
+  {
+    "category": "real-estate",
+    "title": "อาคารรัฐไม่ต้องขออนุญาต : ช่องโหว่กฎหมายที่อาจแลกด้วยชีวิต",
+    "url": "https://www.tcc.or.th/30062568_-government-building_news/"
+  },
+  {
+    "category": "real-estate",
     "title": "ผู้บริโภคร้อง “ อัลติจูดคราฟ บางนา ” ส่วนกลาง 9 ไร่ ไม่ตรงปก!",
     "url": "https://www.tcc.or.th/22062568_altitude-kraf-bangna_news/"
   },
@@ -2808,6 +2863,21 @@
     "category": "real-estate",
     "title": "แนะผู้เสียหายเหตุโรงงานระเบิด เร่งรวบรวมหลักฐานเพื่อเคลมประกันภัย",
     "url": "https://www.tcc.or.th/07072021-news-bomb/"
+  },
+  {
+    "category": "food-and-drug",
+    "title": "ตู้น้ำดื่ม รร. ปลอดภัย เริ่มบังคับใช้ ตค. นี้",
+    "url": "https://www.tcc.or.th/water-dispenser/"
+  },
+  {
+    "category": "food-and-drug",
+    "title": "เตือนภัย อาหารเสริมบำรุงสายตา โฆษณาเกินจริง ระบาดออนไลน์",
+    "url": "https://www.tcc.or.th/eye-supplement/"
+  },
+  {
+    "category": "food-and-drug",
+    "title": "มติ ครม. ปิดฉาก กัญชาเสรี ใช้เฉพาะ กัญชาทางการแพทย์ เท่านั้น",
+    "url": "https://www.tcc.or.th/medical-cannabis-clinic/"
   },
   {
     "category": "food-and-drug",
@@ -3271,6 +3341,16 @@
   },
   {
     "category": "health",
+    "title": "“บัตรทอง” กลไกสำคัญ ลดความเหลื่อมล้ำ สุขภาพคนไทย",
+    "url": "https://www.tcc.or.th/universal-coverage-scheme/"
+  },
+  {
+    "category": "health",
+    "title": "ทำฟันปลอมเถื่อน เสี่ยงเหงือกพัง-มะเร็งช่องปาก แนะใช้สิทธิรัฐทำฟันฟรี",
+    "url": "https://www.tcc.or.th/false-teeth/"
+  },
+  {
+    "category": "health",
     "title": "คลินิกปฏิเสธรักษาจนเสียชีวิต ปมปัญหาคนไทย ไม่รู้สิทธิฉุกเฉินรักษาได้ทุกที่",
     "url": "https://www.tcc.or.th/news-clinic-no-service/"
   },
@@ -3648,6 +3728,26 @@
     "category": "health",
     "title": "แนะปรับหลักเกณฑ์สิทธิป่วยฉุกเฉินให้ใช้ได้จริง",
     "url": "https://www.tcc.or.th/ucep/"
+  },
+  {
+    "category": "product",
+    "title": "สภาผู้บริโภคเดินหน้าฟ้องคดีกลุ่ม “ เนต้า ” ส.ค. นี้",
+    "url": "https://www.tcc.or.th/05072568_neta-class-action_news/"
+  },
+  {
+    "category": "product",
+    "title": "เคาะฟ้อง 6 คดีผู้บริโภค กรณีผิดสัญญาห้องชุด บ้านจัดสรร รถไฟฟ้า ถูกดูดเงิน",
+    "url": "https://www.tcc.or.th/05072568_consumer-cases-sue_news/"
+  },
+  {
+    "category": "product",
+    "title": "เปิดเส้นทาง NETA ล้มที่จีน สะเทือนถึง (ผู้บริโภค) ไทย",
+    "url": "https://www.tcc.or.th/neta-problem-timeline/"
+  },
+  {
+    "category": "product",
+    "title": "ค่าบริการที่มองไม่เห็น: เมื่อผู้บริโภค เรียกรถผ่านแอป แต่ต้องจ่าย ‘ค่าอื่น ๆ’",
+    "url": "https://www.tcc.or.th/23062568_just-grab_scoope/"
   },
   {
     "category": "product",
@@ -4238,6 +4338,56 @@
     "category": "product",
     "title": "เตือนภัย : หลอกขายเตารีด ผ่านเฟซบุ๊ก",
     "url": "https://www.tcc.or.th/tefal-fake/"
+  },
+  {
+    "category": "telecom",
+    "title": "ห่วงคุ้มครองผู้บริโภค – MVNO เตือนกสทช. อย่าด่วนรับรองประมูลคลื่น",
+    "url": "https://www.tcc.or.th/mvno-consumer-rights/"
+  },
+  {
+    "category": "telecom",
+    "title": "ควบรวมมือถือ – เน็ตบ้าน ราคาแพ็กเกจพุ่ง ไร้ทางเลือก จี้แก้ กม. กสทช.",
+    "url": "https://www.tcc.or.th/telco-merger-hurts-consumers/"
+  },
+  {
+    "category": "telecom",
+    "title": "เสียงสะท้อนหลังประมูลคลื่น : ประมูลคลื่น หรือ ประเคนคลื่น",
+    "url": "https://www.tcc.or.th/02072568_spectrum-auction_article/"
+  },
+  {
+    "category": "telecom",
+    "title": "ผู้บริโภค เฮ! ศาลรับฟ้องคดี โฆษณาใน OTT",
+    "url": "https://www.tcc.or.th/court-accepts-ott-case/"
+  },
+  {
+    "category": "telecom",
+    "title": "ยื่นค้านผลประมูลคลื่นฯ ไร้มาตรการคุ้มครองผู้บริโภค",
+    "url": "https://www.tcc.or.th/spectrum-auction-result/"
+  },
+  {
+    "category": "telecom",
+    "title": "เสียงสะท้อนหลัง ประมูลคลื่น : เอกชนได้กำไร ประชาชนได้อะไร?",
+    "url": "https://www.tcc.or.th/01072568_telecom-wave_article/"
+  },
+  {
+    "category": "telecom",
+    "title": "ย้อนไทม์ไลน์ข้อเรียกร้องสภาผู้บริโภค ชะลอประมูลคลื่น",
+    "url": "https://www.tcc.or.th/our-spectrum-timeline/"
+  },
+  {
+    "category": "telecom",
+    "title": "ศาลไม่รับคุ้มครองชั่วคราว แม้เหลือแค่ 2 รายใหญ่เข้าประมูลคลื่น",
+    "url": "https://www.tcc.or.th/spectrum-auction-duopoly/"
+  },
+  {
+    "category": "telecom",
+    "title": "เครือข่ายผู้บริโภคทั่วประเทศ ยื่นชะลอประมูลคลื่นความถี่",
+    "url": "https://www.tcc.or.th/call-to-postpone-spectrum-auction/"
+  },
+  {
+    "category": "telecom",
+    "title": "วอนศาลหยุด ประมูลคลื่น หวั่นผูกขาดนาน 15 ปี กระทบสิทธิผู้บริโภค",
+    "url": "https://www.tcc.or.th/24062568_telecom-sue_news/"
   },
   {
     "category": "telecom",
@@ -4941,6 +5091,11 @@
   },
   {
     "category": "environment",
+    "title": "หนุน “ติดโซลาร์ ลดหย่อนภาษี” เสนอ 6 มาตรการเร่งด่วน ลดภาระค่าไฟยั่งยืน",
+    "url": "https://www.tcc.or.th/27062568_solar-rooftop_news/"
+  },
+  {
+    "category": "environment",
     "title": "ค่าไฟแพง: ตรึงราคา…ไม่ใช่คำตอบ",
     "url": "https://www.tcc.or.th/28052568_electricity-bill_article/"
   },
@@ -5398,6 +5553,11 @@
     "category": "environment",
     "title": "เสนอรัฐลดภาษีน้ำมัน ปรับปรุงโครงสร้างราคา และกำหนดเพดานไม่เกินราคาลิตรละ 25 บาท",
     "url": "https://www.tcc.or.th/expensive-oil/"
+  },
+  {
+    "category": "education",
+    "title": "หยุด! ลงโทษรุนแรงในห้องเรียน ย้ำครูสร้างวินัยเชิงบวก",
+    "url": "https://www.tcc.or.th/punish-school/"
   },
   {
     "category": "education",
